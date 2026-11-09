@@ -223,8 +223,8 @@ Vì vậy, nếu kiểm chứng cho thấy cần AI, mức phù hợp để th�
 | Trường | Nội dung |
 |---|---|
 | **Actor** | Nhân viên tiếp nhận và điều phối ticket tại ban quản lý; cư dân là người gửi và nhận phản hồi. Cần xác nhận đúng vai trò tại đơn vị mục tiêu. |
-| **Quy trình** | Giả thuyết: nhận ticket → đọc nội dung và vị trí → xác định loại/mức độ → chọn bộ phận → phản hồi cư dân → theo dõi trạng thái. Cần quan sát quy trình thật ở CP5. |
-| **Bottleneck** | Giả thuyết: diễn giải nội dung tự do và xác định đúng loại/bộ phận nhận; chưa có dữ liệu thời gian hoặc tỷ lệ chuyển sai. |
+| **Quy trình** |Nhận ticket → đọc nội dung và vị trí → xác định loại/mức độ → chọn bộ phận → phản hồi cư dân → theo dõi trạng thái. Cần quan sát quy trình thật ở CP5. |
+| **Bottleneck** |Diễn giải nội dung tự do và xác định đúng loại/bộ phận nhận; chưa có dữ liệu thời gian hoặc tỷ lệ chuyển sai. |
 | **Impact** | Phân loại sai hoặc phản hồi chậm có thể làm tăng chuyển tiếp và khiến cư dân phải hỏi lại; hiện chưa có bằng chứng định lượng trong báo cáo. |
 | **Success Metric** (baseline → target, cách đo) | Baseline mô phỏng: trung vị 18 phút đến phản hồi đầu tiên; 8/30 ticket bị chuyển lại. Pilot hướng tới giảm ít nhất 20% thời gian trung vị (còn ≤14.4 phút), độ đúng phân loại ≥90% và không tăng tỷ lệ chuyển lại. Đo trên tối đa 50 ticket bằng dấu thời gian hệ thống và đối chiếu gợi ý với bộ phận do nhân viên xác nhận. Số liệu baseline là giả định mock, chưa phải kết quả thật. |
 | **Boundary** | AI không tự gửi phản hồi, tự chuyển/đóng ticket, cam kết thời gian xử lý, suy diễn nguyên nhân sự cố hoặc xử lý ngoại lệ khẩn cấp mà không có nhân viên duyệt. Ticket thiếu thông tin hoặc độ tin cậy thấp phải được đưa cho nhân viên xem. |
