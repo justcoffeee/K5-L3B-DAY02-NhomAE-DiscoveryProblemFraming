@@ -35,19 +35,19 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A — Tiếp nhận và làm rõ yêu cầu | #1 Điều hướng phản ánh cư dân; #3 Làm rõ mô tả lỗi xe; #6 Phản hồi ticket cư dân | |
-| B — Tổng hợp và đối chiếu thông tin | | |
-| C — Kiểm chứng độ tin cậy của thông tin | | |
+| A — Tiếp nhận và làm rõ yêu cầu | #1 Điều hướng phản ánh cư dân; #3 Làm rõ mô tả lỗi xe; #6 Phản hồi ticket cư dân | Phải đọc, hiểu vấn đề người dùng mô tả và xác định thông tin hoặc bên xử lý phù hợp |
+| B — Tổng hợp và đối chiếu thông tin | #2 Đối chiếu yêu cầu đặt phòng; #4 Tổng hợp yêu cầu bài tập; #5 Theo dõi deadline môn học | Thông tin nằm ở nhiều nơi, cần tổng hợp và đối chiếu để biết việc nào khả thi hoặc cần làm |
+| C — Kiểm chứng độ tin cậy của thông tin | #7 Xác minh tính xác thực; #8 Kiểm tra nguồn gốc, thời điểm, ngữ cảnh; #9 Kiểm tra ảnh/video có chỉnh sửa bằng AI | Người dùng thiếu căn cứ để đánh giá thông tin có đáng tin và đúng ngữ cảnh hay không |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
 Gốc là **1 outcome**. Nhánh là **opportunity** (nhu cầu, pain), không phải tính năng hay công cụ.
 
 ```text
-OUTCOME: 
-├── Opportunity A: 
-├── Opportunity B: 
-└── Opportunity C: 
+OUTCOME: Giảm thời gian phản hồi ticket cư dân, đồng thời bảo đảm thông tin chính xác và yêu cầu được chuyển đúng bộ phận.
+├── Opportunity A: Thông tin phản ánh thiếu vị trí, thời điểm hoặc mô tả
+├── Opportunity B: Nhân viên khó tìm hướng dẫn thống nhất, mỗi người một cách hướng dẫn riêng
+└── Opportunity C: Trách nhiệm giữa các bộ phận chưa rõ với một số yêu cầu
 ```
 
 Những ý đã gạch bỏ vì là solution đội lốt opportunity:
@@ -58,15 +58,15 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
+| Mô tả lỗi xe trước khi kiểm tra | 4 | 4 | 3 | 3 | 4 | 4 | 5 | 22 |
+| Phản hồi ticket cư dân  | 5 | 5 | 4 | 4 | 5 | 4 | 5 | 32 |
+| Kiểm tra tính xác thực của thông tin | 2 | 2 | 3 | 3 | 2 | 3 | 3 | 18 |
 
-**Candidate được chọn:**
+**Candidate được chọn:** Phản hồi ticket cư dân
 
-**Vì sao chọn:**
+**Vì sao chọn:** Vừa sức đối với nhóm và có thể ứng dụng được
 
-**Vì sao loại các candidate còn lại:**
+**Vì sao loại các candidate còn lại:** Chưa thật sự nắm rõ domain của candidate, khó triển khai và so sánh thực tế
 
 **Xử lý bất đồng (nếu có):**
 
@@ -78,12 +78,10 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
+| 1 | Nhân viên thường nhận những ticket có nội dung tương tự nhau | Value | 5 | 5 | Số lần xuất hiện yêu cầu sửa chữa về chỗ gửi xe tăng cao |
+| 2 | Tìm hướng dẫn và soạn lại câu trả lời là bước tốn thời gian đáng kể | Value | 4 | 4 | Nhân viên không thống nhất trong cách xử lý |
+| 3 | Hướng dẫn đã duyệt tồn tại nhưng khó tìm hoặc khó biết bản nào mới nhất | Feasibility | 3 | 3 | Cách lưu tài liệu, tìm kiếm và cập nhật hiện tại |
+| 4 | Quy định cho phép xử lý nội dung ticket bằng công cụ dự kiến | Viability | 5 | 3 | Quy định dữ liệu và người có thẩm quyền xác nhận|
 
 *Điền 4–6 giả định; xóa dòng thừa.*
 
@@ -108,16 +106,15 @@ Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| | | | |
+| Phỏng vấn | 2 | Số lượng ticket trùng nhiều, phản hồi lâu | Không có |
 
-**Nhóm đã sửa problem thế nào sau kiểm chứng:**
+**Nhóm đã sửa problem thế nào sau kiểm chứng:**  Nhóm thu hẹp bài toán từ “phản hồi ticket cư dân” sang “giảm thời gian xử lý các ticket có nội dung lặp lại”. Ba cuộc phỏng vấn ghi nhận nhiều ticket tương tự và thời gian phản hồi lâu.
 
 ### 3.3. Research giải pháp đã có
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| | | | | | |
-| | | | | | |
+| Copilot | https://copilot.com/vi-vn/ | Tìm thông tin và gợi ý câu trả lời từ các nguồn kiến thức được bật. | Hiển thị nguồn để nhân viên kiểm tra; có thể chỉnh sửa trước khi gửi và lưu câu trả lời thành macro. | Cần kiểm tra nguồn có cập nhật, phù hợp quy định từng khu dân cư và được phép sử dụng không. | Gợi ý phản hồi cần có nguồn và người duyệt, thay vì để AI tự trả lời theo kiến thức chung |
 | | | | | | |
 
 ---
