@@ -8,7 +8,7 @@
 - Tên nhóm: Nhóm AE
 - Thành viên: xem `TEAM.md`
 - Candidate problem được chọn (1 câu): Xử lý và phản hồi ticket của cư dân
-- Quyết định cuối: Go — pilot giới hạn (kịch bản mô phỏng)
+- Quyết định cuối: Go — pilot giới hạn sau khi baseline và quyền sử dụng dữ liệu được xác nhận.
 
 ---
 
@@ -241,7 +241,9 @@ Các điểm dưới đây được ghi nhận qua rà soát bằng AI; nhóm c�
 
 Bài của nhóm nằm ở ô **độ mơ hồ cao, độ phức tạp thấp–trung bình**. Nội dung ticket cư dân thường là văn bản tự do nên có nhiều cách diễn đạt cho cùng một sự cố; còn quy trình tiếp nhận, phân loại, chuyển bộ phận và phản hồi có thể thiết kế thành các bước cố định.
 
-Vì vậy, nếu kiểm chứng cho thấy cần AI, mức phù hợp để thử là Workflow có AI hỗ trợ phân loại và soạn nháp trong một quy trình định sẵn.
+Các snapshot CP4 cho thấy ticket lặp lại, nhân viên phải tìm hướng dẫn và cư dân có lúc phải chờ phản hồi. Nhóm chưa có baseline định lượng thống nhất, nên pilot sẽ đo thời gian phản hồi và chất lượng nguồn trước khi so sánh.
+
+Vì vậy, mức phù hợp để thử là Workflow có các bước cố định, trong đó AI tìm hướng dẫn đã duyệt và soạn nháp phản hồi có dẫn nguồn; nhân viên xác nhận trước khi gửi.
 
 ### 6.2. So sánh 4 mức
 
@@ -249,28 +251,28 @@ Vì vậy, nếu kiểm chứng cho thấy cần AI, mức phù hợp để th�
 |---|---|---|---|---|
 | **No AI** (sửa quy trình) | Chuẩn hóa form gửi ticket, danh mục sự cố, thông tin vị trí bắt buộc và mẫu phản hồi | Nội dung có cấu trúc, nhóm sự cố ít và quy tắc chuyển tuyến rõ | Người gửi vẫn chọn sai danh mục hoặc nội dung tự do cần người đọc | Nên làm nền tảng; có thể đủ nếu form giảm được lỗi phân loại |
 | **Rule** | Dựa vào danh mục, vị trí và từ khóa để gán bộ phận/loại ticket | Trường đầu vào rõ, quy tắc ổn định, ít ngoại lệ | Không hiểu tốt cách diễn đạt đa dạng; từ khóa dễ gây chuyển sai | Dùng cho trường dữ liệu xác định được, cần đo tỷ lệ đúng |
-| **Workflow** | Nhận ticket → rule kiểm tra trường bắt buộc → AI gợi ý loại/ưu tiên và draft phản hồi → nhân viên duyệt/chỉnh → gửi và chuyển xử lý | Văn bản tự do tạo khó khăn thật, nhưng các bước và điểm duyệt của con người cố định | Gợi ý sai loại/ưu tiên hoặc draft không phù hợp ngữ cảnh | **Ứng viên thử nghiệm**, chỉ trên dữ liệu đã khử định danh và có người duyệt |
+| **Workflow** | Nhận ticket → Rule kiểm tra thông tin → AI tìm hướng dẫn đã duyệt và soạn draft có nguồn → nhân viên duyệt/chỉnh → gửi và chuyển xử lý | Ticket lặp lại cần tra cứu; quy trình tra nguồn và duyệt có thể định trước | Chọn sai/nguồn cũ hoặc draft không bám hướng dẫn | **Chọn để pilot giới hạn**, chỉ với tài liệu được duyệt và người duyệt |
 | **Agent** | AI tự đọc ticket, hỏi cư dân, quyết định bộ phận và phản hồi/đóng ticket | Chỉ khi cần tự xử lý nhiều nhánh không định trước và có kiểm soát đáng tin cậy | Có thể hỏi sai, chuyển sai, hứa sai hoặc tự đóng ticket | Chưa chọn; quyền tự hành động chưa có bằng chứng cần thiết |
 
-**Mức chọn:** Workflow cho thử nghiệm có kiểm soát; hiện chưa đủ bằng chứng để triển khai cho ticket thật.
+**Mức chọn:** Workflow cho pilot giới hạn; chưa triển khai rộng.
 
-**Vì sao không chọn mức đơn giản hơn:** Rule và form chuẩn hóa có thể xử lý các trường rõ ràng, nhưng có thể không đủ với nội dung tự do và cách mô tả khác nhau. Tuy nhiên, báo cáo chưa có kết quả kiểm chứng cho thấy Rule thất bại. Vì vậy Workflow là giả thuyết để so sánh trong pilot, không phải kết luận rằng AI chắc chắn cần thiết.
+**Vì sao không chọn mức đơn giản hơn:** Form chuẩn hóa và Rule phù hợp để kiểm tra trường bắt buộc, loại ticket và tuyến chuyển. Chúng không tự tìm đoạn hướng dẫn phù hợp trong kho tài liệu hay soạn câu trả lời theo ngữ cảnh. Workflow chỉ thêm AI ở hai bước đó, còn các bước còn lại vẫn theo quy tắc và do nhân viên kiểm soát. Nếu pilot cho thấy tìm kiếm và mẫu trả lời thường đã đủ nhanh, nhóm sẽ quay về No AI/Rule.
 
 ### 6.3. AI Canvas rút gọn
 
 | Thành phần | Nội dung |
 |---|---|
-| **Prediction** — AI dự đoán / tạo ra gì? | Gợi ý loại sự cố, bộ phận phù hợp, mức ưu tiên và bản nháp phản hồi dựa trên nội dung ticket. Không tự xác định nguyên nhân kỹ thuật hay cam kết thời gian xử lý. |
-| **Judgment** — con người cân nhắc, quyết định gì? | Nhân viên ban quản lý kiểm tra vị trí, mức độ khẩn cấp, bộ phận nhận và nội dung phản hồi; sửa hoặc từ chối gợi ý. |
+| **Prediction** — AI dự đoán / tạo ra gì? | Tìm đoạn hướng dẫn đã duyệt phù hợp với ticket lặp lại và soạn nháp phản hồi dựa trên nguồn đó. Không tự suy ra chính sách hay tình trạng vận hành hiện thời. |
+| **Judgment** — con người cân nhắc, quyết định gì? | Nhân viên kiểm tra ticket, tòa nhà/phạm vi áp dụng và phiên bản hướng dẫn; xác nhận nội dung và tuyến xử lý, hoặc bỏ nháp nếu nguồn không phù hợp. |
 | **Action** — hành động cuối cùng là gì, ai làm? | Nhân viên xác nhận rồi mới gửi phản hồi và chuyển ticket. |
-| **Outcome** — đo kết quả bằng gì? | Tỷ lệ phân loại/chuyển đúng lần đầu, thời gian từ nhận đến phản hồi đầu tiên, tỷ lệ draft được chấp nhận sau chỉnh sửa, và số ticket phải chuyển lại. Baseline cần đo trước pilot. |
-| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Nội dung ticket đã khử định danh, vị trí/tòa nhà, danh mục sự cố, quy tắc phân tuyến và mẫu phản hồi đã duyệt. Chưa xác nhận nhóm có quyền truy cập hay dữ liệu đủ chất lượng. |
-| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Nhãn loại/bộ phận do nhân viên xác nhận, lý do sửa hoặc từ chối draft và ticket bị chuyển lại. Chỉ lưu theo quy định dữ liệu của đơn vị. |
+| **Outcome** — đo kết quả bằng gì? | Thời gian tra cứu và đến phản hồi đầu tiên, tỷ lệ câu trả lời bám đúng hướng dẫn còn hiệu lực, tỷ lệ nhân viên chấp nhận draft sau chỉnh sửa, và số ticket phải hỏi lại/chuyển lại. |
+| **Input** — AI cần dữ liệu đầu vào gì mỗi lần chạy? Có sẵn không? | Ticket đã khử định danh, tòa nhà/phạm vi, kho hướng dẫn đã duyệt có phiên bản, danh mục ticket và mẫu phản hồi. Quyền truy cập cần được xác nhận trước pilot. |
+| **Feedback** — lấy phản hồi ở đâu để cải thiện? | Nhân viên đánh dấu nguồn đúng/sai, lý do sửa hoặc từ chối draft, ticket phải hỏi lại/chuyển lại; lưu theo quy định dữ liệu của đơn vị. |
 
 ### 6.4. Hai câu hỏi của Google PAIR
 
-- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng: Chưa có phỏng vấn hoặc survey trong báo cáo để kết luận. Giả thuyết an toàn ban đầu là nhân viên muốn được gợi ý để xử lý nhanh hơn, nhưng vẫn tự duyệt trước khi gửi và chuyển ticket. Cần hỏi người trực tiếp xử lý ticket.
-- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào: Trong đề xuất ban đầu, **bỏ sót sự cố khẩn cấp** có thể gây chậm xử lý và ảnh hưởng cư dân. Thiết kế cần quy tắc ưu tiên an toàn, gắn cờ trường hợp không chắc chắn để nhân viên xem xét, và không để AI tự đóng hoặc tự chuyển ticket trong pilot. Mức độ hậu quả cần xác nhận với ban quản lý.
+- Người dùng muốn **được hỗ trợ (augment)** hay **giao hẳn việc (automate)**? Bằng chứng: Các snapshot CP4 ghi nhận nhân viên tra cứu thủ công, có trường hợp mất 30 phút tìm hướng dẫn; cư dân kể đã chờ phản hồi lâu. Snapshot chưa hỏi trực tiếp người dùng muốn được hỗ trợ hay giao hẳn việc. Vì vậy pilot đề xuất augment với nhân viên duyệt, rồi cần xác nhận lựa chọn này với nhân viên vận hành.
+- AI sai kiểu nào tệ hơn, **báo nhầm** hay **bỏ sót**? Vì sao, và thiết kế đã xử lý thế nào: Với bài toán này, trích sai hoặc dùng hướng dẫn hết hiệu lực có thể dẫn đến phản hồi sai; bỏ sót hướng dẫn phù hợp khiến nhân viên tiếp tục tra cứu thủ công. Workflow chỉ dùng nguồn đã duyệt và hiện phiên bản; nếu không tìm được nguồn phù hợp thì chuyển nhân viên tra cứu, không để AI tự trả lời.
 
 ---
 
@@ -278,32 +280,32 @@ Vì vậy, nếu kiểm chứng cho thấy cần AI, mức phù hợp để th�
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | Nhân viên tiếp nhận và điều phối ticket tại ban quản lý; cư dân là người gửi và nhận phản hồi. Cần xác nhận đúng vai trò tại đơn vị mục tiêu. |
-| **Quy trình** |Nhận ticket → đọc nội dung và vị trí → xác định loại/mức độ → chọn bộ phận → phản hồi cư dân → theo dõi trạng thái. Cần quan sát quy trình thật ở CP5. |
-| **Bottleneck** |Diễn giải nội dung tự do và xác định đúng loại/bộ phận nhận; chưa có dữ liệu thời gian hoặc tỷ lệ chuyển sai. |
-| **Impact** | Phân loại sai hoặc phản hồi chậm có thể làm tăng chuyển tiếp và khiến cư dân phải hỏi lại; hiện chưa có bằng chứng định lượng trong báo cáo. |
-| **Success Metric** (baseline → target, cách đo) | Baseline mô phỏng: trung vị 18 phút đến phản hồi đầu tiên; 8/30 ticket bị chuyển lại. Pilot hướng tới giảm ít nhất 20% thời gian trung vị (còn ≤14.4 phút), độ đúng phân loại ≥90% và không tăng tỷ lệ chuyển lại. Đo trên tối đa 50 ticket bằng dấu thời gian hệ thống và đối chiếu gợi ý với bộ phận do nhân viên xác nhận. Số liệu baseline là giả định mock, chưa phải kết quả thật. |
-| **Boundary** | AI không tự gửi phản hồi, tự chuyển/đóng ticket, cam kết thời gian xử lý, suy diễn nguyên nhân sự cố hoặc xử lý ngoại lệ khẩn cấp mà không có nhân viên duyệt. Ticket thiếu thông tin hoặc độ tin cậy thấp phải được đưa cho nhân viên xem. |
-| **AI intervention point** | Sau bước nhận ticket và kiểm tra trường bắt buộc, trước khi nhân viên quyết định loại/bộ phận và soạn phản hồi. |
-| **Mức chọn** | Workflow thử nghiệm có nhân viên duyệt; sẽ xem lại sau khi so sánh với form chuẩn hóa và Rule. |
-| **Rủi ro & người kiểm tra** | Gợi ý sai loại/ưu tiên hoặc phản hồi không phù hợp; nhân viên trực kiểm tra mọi gợi ý trước hành động. Cần xin phép và khử định danh dữ liệu trước khi thử. |
+| **Actor** | Nhân viên tiếp nhận/CSKH tại ban quản lý, phụ trách tìm hướng dẫn và chuẩn bị phản hồi cho ticket cư dân lặp lại. |
+| **Quy trình** | Nhận ticket → làm rõ → phân loại → tra cứu hướng dẫn → soạn và kiểm tra → phản hồi, chuyển xử lý và ghi trạng thái. |
+| **Bottleneck** | Tra cứu hướng dẫn đã duyệt và xác nhận phiên bản phù hợp; snapshot #3 ghi một trường hợp mất 30 phút, chưa phải baseline đại diện. |
+| **Impact** | Tra cứu lặp lại có thể làm chậm phản hồi và tạo cách hướng dẫn không thống nhất; CP4 có ví dụ cụ thể nhưng chưa đủ dữ liệu để khái quát quy mô. |
+| **Success Metric** (baseline → target, cách đo) | **Baseline:** đo trong tuần trước pilot, bằng thời gian từ lúc nhận ticket lặp lại đến phản hồi đầu tiên, tỷ lệ draft bám hướng dẫn còn hiệu lực và tỷ lệ hỏi lại/chuyển lại. **Target:** giảm ít nhất 20% thời gian phản hồi trung vị; ít nhất 95% draft dẫn đúng hướng dẫn còn hiệu lực; không tăng tỷ lệ hỏi lại/chuyển lại. **Cách đo:** so sánh timestamp và nhân viên đối chiếu draft với kho hướng dẫn trên tối đa 50 ticket tương đương. |
+| **Boundary** | AI chỉ tìm hướng dẫn được duyệt và soạn nháp kèm nguồn; không tự gửi/chuyển/đóng ticket, hứa thời hạn, đưa thông tin vận hành hiện thời hoặc xử lý ngoại lệ khẩn cấp. Nhân viên xác minh nguồn, phạm vi và nội dung trước mọi hành động. |
+| **AI intervention point** | Sau khi ticket đủ thông tin và đã phân loại, tại bước tìm hướng dẫn và chuẩn bị phản hồi. |
+| **Mức chọn** | Workflow cho pilot giới hạn; so sánh với tra cứu thủ công/mẫu trả lời và Rule. |
+| **Rủi ro & người kiểm tra** | Rủi ro dùng sai hoặc cũ hướng dẫn; nhân viên trực kiểm tra nguồn, phiên bản và draft trước khi gửi. Chỉ chạy khi được phép dùng dữ liệu và tài liệu. |
 
 **Thay đổi so với v0 và lý do:**
 
 | Trường | v0 | v1 | Vì sao đổi |
 |---|---|---|---|
-| Success Metric | Chưa có baseline/target, chỉ nêu pain cần xử lý | Đề xuất đo độ đúng phân loại, thời gian phản hồi đầu tiên và tỷ lệ chuyển lại | Chuyển từ nhận định chung sang các chỉ số cần đo; baseline vẫn phải thu thập |
-| Boundary | Chưa ghi rõ | AI chỉ gợi ý; nhân viên duyệt; không tự gửi/chuyển/đóng ticket hay xử lý ngoại lệ khẩn cấp | Giữ quyền quyết định và xử lý rủi ro trong pilot |
-| AI intervention point | Chưa xác định | Sau kiểm tra trường bắt buộc, trước phân loại và soạn phản hồi | Xác định vị trí thử nghiệm có thể kiểm soát |
+| Success Metric | CP5 nêu baseline chưa đo; đề xuất giảm 20% thời gian phản hồi và độ đúng nội dung/tuyến xử lý ≥90% | Đo baseline trước pilot; đặt mục tiêu giảm 20% thời gian phản hồi và ≥95% draft dẫn đúng nguồn hiện hành | Chuyển cách đo từ đề xuất chung sang chỉ số pilot; baseline phải thu thập trước khi đánh giá |
+| Boundary | AI soạn nháp có nguồn, nhân viên kiểm trước khi gửi | AI chỉ tra hướng dẫn được duyệt và soạn draft; nhân viên xác minh nguồn/phạm vi; không tự gửi hay xử lý khẩn cấp | Thu hẹp hành động AI vào tra cứu và soạn nháp |
+| AI intervention point | CP5 xác định bottleneck tra hướng dẫn và xác nhận cách xử lý | Sau khi ticket đủ thông tin, tại bước tìm hướng dẫn và chuẩn bị phản hồi | Gắn can thiệp với bottleneck nhóm đã nêu ở CP5 |
 
 **Tiêu chí đánh giá đầu ra của AI (3–5 tiêu chí):**
 
 | # | Tiêu chí | Đạt khi | Không đạt khi |
 |---:|---|---|---|
-| 1 | Đúng loại sự cố và bộ phận | Nhãn nhân viên duyệt khớp loại và bộ phận được gợi ý | Sai nhóm sự cố hoặc chuyển đến bộ phận không xử lý được |
-| 2 | Ưu tiên an toàn | Không bỏ qua từ khóa/ngữ cảnh khẩn cấp đã được quy định; trường hợp không chắc được gắn cờ | Bỏ sót dấu hiệu khẩn cấp hoặc tự hạ mức ưu tiên |
-| 3 | Phản hồi bám sát thông tin | Draft chỉ nhắc thông tin ticket và hướng dẫn đã được duyệt, không tự hứa thời hạn | Bịa tình trạng, chính sách, thời hạn hoặc hướng xử lý |
-| 4 | Có thể duyệt và sửa | Nhân viên xem được ticket gốc, gợi ý và sửa trước khi gửi | Hành động xảy ra trước khi nhân viên duyệt hoặc không truy lại được nội dung gốc |
+| 1 | Đúng nguồn và đúng phiên bản | Mọi chỉ dẫn trong draft truy được đến tài liệu được duyệt, còn hiệu lực và đúng phạm vi | Dùng nguồn không rõ, hết hạn hoặc áp dụng cho tòa nhà khác |
+| 2 | Bám sát nguồn | Mọi hướng dẫn trong draft được hỗ trợ trực tiếp bởi nguồn đã dẫn | Thêm chính sách, thời hạn hoặc thông tin không có trong nguồn |
+| 3 | Đủ ý và phù hợp ticket | Draft trả lời đúng câu hỏi và không bỏ qua điều kiện quan trọng trong ticket | Bỏ sót câu hỏi hoặc áp dụng hướng dẫn không liên quan |
+| 4 | Chuyển người khi không chắc | Không có nguồn phù hợp thì báo không tìm thấy và yêu cầu nhân viên tra cứu | Tự tạo câu trả lời khi nguồn thiếu/mâu thuẫn |
 
 ---
 
@@ -313,24 +315,24 @@ Vì vậy, nếu kiểm chứng cho thấy cần AI, mức phù hợp để th�
 
 | Rủi ro | Câu hỏi | Mức độ rủi ro (Thấp = an toàn / TB / Cao = nguy hiểm) | Lý do / bằng chứng |
 |---|---|---|---|
-| **Value** | Người dùng có thật sự cần và sẽ dùng không? | Trung bình | Trong kịch bản mô phỏng, 2/3 nhân viên được hỏi xác nhận phân loại/soạn phản hồi là phần tốn thời gian; 8/30 ticket bị chuyển lại. Mẫu nhỏ nên cần xác nhận tiếp trong pilot. |
-| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | Thấp | AI chỉ gợi ý trong quy trình hiện tại, nhân viên xem ticket gốc và duyệt/sửa trước khi gửi hoặc chuyển. Pilot theo dõi tỷ lệ chấp nhận và thời gian sửa. |
-| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | Trung bình | Kịch bản giả định có 30 ticket đã khử định danh và nhãn bộ phận để đánh giá ban đầu. Cần kiểm tra chất lượng nhãn và kết nối hệ thống trong pilot nhỏ. |
-| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Trung bình | Pilot dùng dữ liệu đã khử định danh, giới hạn người truy cập và chưa tự động gửi/chuyển ticket. Bộ phận vận hành cần xác nhận quy định dữ liệu trước khi chạy. |
+| **Value** | Người dùng có thật sự cần và sẽ dùng không? | Trung bình | Hai snapshot nhân viên ghi nhận ticket lặp lại và khó tìm hướng dẫn; snapshot cư dân kể đã chờ phản hồi. Tín hiệu định tính ủng hộ pain nhưng chưa đại diện. |
+| **Usability** | Người dùng có dùng được, có hiểu và sửa được đầu ra của AI không? | Thấp | AI chỉ trả nguồn và draft trong quy trình hiện tại; nhân viên kiểm tra và quyết định trước khi gửi. Pilot đo tỷ lệ chấp nhận và thời gian chỉnh sửa. |
+| **Feasibility** | Có đủ dữ liệu, công cụ, kỹ năng để làm không? | Trung bình | Snapshot cho thấy nhân viên đang tra cứu kho thông tin chung; cần xác nhận kho hướng dẫn có thể cấp quyền, phiên bản tài liệu rõ và ticket được phép dùng trong pilot. |
+| **Viability** | Có hợp chi phí, pháp lý, quy định tổ chức không? Ai vận hành? | Trung bình | Phạm vi pilot nhỏ, không tự động gửi và chỉ dùng tài liệu được duyệt; vẫn cần đơn vị vận hành xác nhận quyền dùng dữ liệu và phân công người quản lý kho hướng dẫn. |
 
 ### 8.2. Kết luận
 
-**Quyết định:** Go — pilot giới hạn, theo kịch bản mô phỏng.
+**Quyết định:** Go — pilot giới hạn.
 
-**Lý do:** Theo dữ liệu giả định của kịch bản mock, pain xuất hiện trong phỏng vấn và ticket đã rà soát, có baseline ban đầu để so sánh. Không rủi ro nào được xếp Cao trong phạm vi pilot vì AI chỉ gợi ý, nhân viên quyết định mọi hành động và thử nghiệm giới hạn trên dữ liệu đã khử định danh. Go ở đây chỉ cho pilot nhỏ, không phải triển khai rộng.
+**Lý do:** Snapshot CP4 cung cấp tín hiệu định tính về ticket lặp lại, thời gian chờ và khó tìm hướng dẫn. Nhóm sẽ đo baseline thật trước khi đánh giá hiệu quả. Không rủi ro nào được xếp Cao trong phạm vi pilot giới hạn nếu tài liệu và dữ liệu được phê duyệt, AI chỉ tra cứu/soạn nháp và nhân viên duyệt mọi nội dung. Go chỉ áp dụng cho pilot nhỏ có kiểm soát, chưa phải triển khai rộng.
 
-**Nếu Go — pilot nhỏ nhất:** Chạy pilot 2 tuần trên tối đa 50 ticket mới, sau khi được bộ phận dữ liệu/pháp chế cho phép. AI gợi ý phân loại và soạn nháp. Nhân viên duyệt, sửa và tự gửi/chuyển ticket. Ghi thời gian phản hồi, độ đúng phân loại, tỷ lệ chuyển lại và tỷ lệ draft được chấp nhận. So sánh với baseline mô phỏng 18 phút và 8/30 ticket chuyển lại.
+**Nếu Go — pilot nhỏ nhất:** Sau khi được phép dùng dữ liệu, chạy pilot 2 tuần trên tối đa 50 ticket lặp lại đã khử định danh. AI tìm hướng dẫn có nguồn và soạn nháp; nhân viên xác minh nguồn, sửa và tự gửi/chuyển ticket. Ghi baseline trong tuần trước pilot, rồi theo dõi thời gian đến phản hồi đầu tiên, độ đúng/hiệu lực nguồn, tỷ lệ draft được chấp nhận và số lần hỏi lại/chuyển lại.
 
-**Nếu Not Yet — cần kiểm chứng gì trước:** Nếu chưa có phê duyệt dữ liệu hoặc chưa xác minh được các giả định mô phỏng, tạm hoãn pilot và xác nhận quy trình, baseline cùng quyền sử dụng dữ liệu với bộ phận phụ trách.
+**Nếu Not Yet — cần kiểm chứng gì trước:** Nếu chưa có phê duyệt dữ liệu hoặc chưa xác nhận được quy trình/kho hướng dẫn, tạm hoãn pilot và làm rõ baseline cùng quyền sử dụng dữ liệu với bộ phận phụ trách.
 
 **Nếu No-Go — nên làm gì thay AI:** Chuẩn hóa danh mục sự cố, trường bắt buộc về vị trí/mức độ, quy tắc chuyển tuyến và mẫu phản hồi đã duyệt.
 
-**Ngưỡng dừng** (nếu sau … mà … thì quay về …): Dừng pilot nếu độ đúng phân loại dưới 90% sau 50 ticket, có một trường hợp bỏ sót sự cố khẩn cấp, thời gian phản hồi trung vị không giảm ít nhất 20% so với baseline 18 phút, hoặc nhân viên phải sửa trên 30% nội dung draft. Khi dừng, quay về danh mục/Rule và quy trình nhân viên xử lý thủ công để xem lại dữ liệu, tiêu chí và phạm vi.
+**Ngưỡng dừng** (nếu sau … mà … thì quay về …): Dừng pilot nếu dưới 95% draft dẫn đúng hướng dẫn còn hiệu lực trong mẫu tối đa 50 ticket, có một phản hồi chứa thông tin không được nguồn hỗ trợ, thời gian phản hồi trung vị không giảm ít nhất 20% so với baseline tuần trước, hoặc nhân viên phải viết lại trên 30% draft. Khi dừng, quay về kho hướng dẫn/mẫu trả lời và quy trình tra cứu thủ công để xem lại nguồn, tiêu chí và phạm vi.
 
 ---
 

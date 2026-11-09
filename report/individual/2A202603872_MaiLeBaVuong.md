@@ -74,7 +74,7 @@ Quy trình nháp hiện tại:
 → [Chọn bộ phận và chuyển: 2 phút]
 → [Xác nhận đã tiếp nhận: 2 phút]
 
-Tổng thời gian mô phỏng: khoảng 15 phút cho một phản ánh có thông tin cần bổ sung.
+Tổng ước lượng cho quy trình giả định: khoảng 15 phút nếu cần hỏi bổ sung.
 ```
 
 ### Problem Card #2 — Đối chiếu đặt phòng đoàn
@@ -102,7 +102,7 @@ Quy trình nháp hiện tại *(thời gian là biến cần đo)*:
 → [Tạo draft booking: 5 phút]
 → [Nhân viên đối chiếu và phản hồi: 6 phút]
 
-Tổng thời gian mô phỏng: khoảng 42 phút cho một yêu cầu có thông tin cần bổ sung.
+Tổng ước lượng cho quy trình giả định: khoảng 42 phút nếu cần hỏi bổ sung.
 ```
 
 ### Problem Card #3 — Làm rõ mô tả lỗi xe
@@ -129,7 +129,7 @@ Quy trình nháp hiện tại *(thời gian là biến cần đo)*:
 → [Kỹ thuật viên kiểm tra xe: theo quy trình kỹ thuật]
 → [Xác định nguyên nhân/mã lỗi: theo quy trình kỹ thuật]
 
-Tổng thời gian tiếp nhận mô phỏng: khoảng 11 phút, chưa tính thời gian kiểm tra kỹ thuật.
+Tổng ước lượng cho khâu tiếp nhận giả định: khoảng 11 phút, chưa tính thời gian kiểm tra kỹ thuật.
 ```
 
 ### Card muốn pitch nhất
@@ -158,11 +158,11 @@ Tổng thời gian tiếp nhận mô phỏng: khoảng 11 phút, chưa tính th�
 | Nhận phản biện | Phạm Hoàng Huy hỏi: “Làm cách nào để xác nhận đã điều hướng đúng về bộ phận xử lý?” khi mình pitch bài toán điều hướng vấn đề cư dân | Bổ sung việc theo dõi bộ phận nhận/xác nhận ticket, tỷ lệ chuyển đúng lần đầu và tỷ lệ chuyển lại làm chỉ số kiểm tra trong pilot |
 | Gom cluster / cây OST | Đọc duyệt phần cluster và cây OST trong báo cáo nhóm, đối chiếu với candidate ticket cư dân nhóm chọn | Nắm được mối liên hệ giữa các candidate và hướng nhóm hội tụ |
 | Chọn candidate problem | Tham gia đề xuất hướng ticket cư dân; báo cáo nhóm ghi candidate cuối là xử lý và phản hồi ticket của cư dân | Chủ đề nhóm được dùng làm cơ sở cho CP6 |
-| Kiểm chứng / research | Đọc duyệt mục CP4 và rà soát cách dùng dữ liệu trong lập luận CP6 | Phân biệt rõ kịch bản mô phỏng với kết quả khảo sát thật; phần kiểm chứng thực tế cần nhóm bổ sung |
+| Kiểm chứng / research | Đọc duyệt mục CP4 và rà soát cách dùng các snapshot trong lập luận CP6 | Dùng tín hiệu định tính về ticket lặp lại, thời gian chờ và khó tìm hướng dẫn; cần thu thập baseline định lượng trước pilot |
 | Quy trình nhóm | Đọc duyệt mục CP5 và đối chiếu với luồng ticket được dùng trong CP6 | Xác định các bước, thời lượng và baseline vẫn cần nhóm xác nhận từ quy trình thực tế |
-| Problem Statement | Hoàn thiện nội dung v1 trong mục 7 dựa trên vấn đề thực tế| Làm rõ metric, boundary, điểm AI can thiệp và vai trò duyệt của nhân viên |
+| Problem Statement | Hoàn thiện nội dung v1 trong mục 7 theo chủ đề nhóm chốt | Làm rõ metric cần đo, boundary, điểm AI can thiệp và vai trò duyệt của nhân viên |
 | Mức can thiệp AI | Hoàn thiện ma trận No AI/Rule/Workflow/Agent và AI Canvas cho đề xuất xử lý ticket | Đề xuất Workflow có người duyệt; ghi rõ cần so sánh với form và Rule |
-| Quyết định | Hoàn thiện đánh giá 4 rủi ro và đề xuất Go cho pilot giới hạn theo yêu cầu mock | Nêu mục tiêu, điều kiện pilot và ngưỡng dừng; số liệu khảo sát trong kịch bản được đánh dấu giả định |
+| Quyết định | Hoàn thiện đánh giá 4 rủi ro và đề xuất Go cho pilot giới hạn | Nêu mục tiêu cần đo, điều kiện phê duyệt dữ liệu và ngưỡng dừng; quyết định dựa trên tín hiệu định tính đã ghi trong snapshot |
 
 ---
 
@@ -171,11 +171,11 @@ Tổng thời gian tiếp nhận mô phỏng: khoảng 11 phút, chưa tính th�
 | Checkpoint | Tôi dùng AI để làm gì? | AI hữu ích ở đâu? | AI sai hoặc hời hợt ở đâu? | Tôi sửa gì bằng nhận định của mình? |
 |---|---|---|---|---|
 | CP1 Scan | Đề xuất bảng chủ đề VinFast, Vinhomes và Vinpearl làm điểm xuất phát; yêu cầu mở rộng thành problem theo 4 lăng kính và chọn các hướng phù hợp cho scan 10 ý | Gợi ý thêm pain liên quan và hỗ trợ sắp xếp bảng | Một số gợi ý đi quá xa vấn đề ban đầu hoặc nghe như dữ liệu nghiệp vụ đã được xác nhận | Chỉnh theo Job Story, loại ý giải pháp quá rộng và ghi dấu hiệu cần thu thập thay vì xem là số liệu thật |
-| CP2 Problem Card | Lựa chọn các hướng cư dân, booking đoàn và tiếp nhận lỗi xe để phát triển thành 3 card; yêu cầu nêu actor, bottleneck, metric và từng bước quy trình | Hỗ trợ cấu trúc hóa card và phác thời lượng cho bản nháp thảo luận | Các bước và thời lượng chưa được xác nhận với người làm nghiệp vụ | Gắn nhãn thời lượng mô phỏng, xác định bottleneck cần kiểm chứng và bổ sung phương án không dùng AI |
-| CP4 Research | Không dùng AI để thay phỏng vấn hoặc tạo kết quả khảo sát; rà soát mục CP4 trong báo cáo nhóm | Không sử dụng AI để giả lập người dùng hay tạo bằng chứng | Báo cáo nhóm chưa có kết quả kiểm chứng thật để ghi nhận như dữ liệu | Giữ riêng số liệu mock ở CP6, không trình bày chúng như kết quả khảo sát thật |
-| CP5 Quy trình | Yêu cầu phác quy trình hiện tại cho ba card để làm rõ các bước và vị trí bottleneck | Chuyển candidate thành luồng bước dễ đọc và so sánh | Quy trình và thời lượng từng bước là giả thuyết, chưa dựa trên quan sát thực địa | Gắn nhãn giả định/mô phỏng và nêu rõ cần người trong nghiệp vụ xác nhận trước khi dùng làm baseline |
-| CP5–6 Problem Statement | Đưa chủ đề nhóm đã chốt là xử lý và phản hồi ticket cư dân; yêu cầu điền v1 theo template, làm rõ metric, boundary và điểm AI can thiệp | Hệ thống hóa các trường thành đề xuất nhất quán | Nếu thiếu nhãn, số liệu và giả định có thể bị hiểu nhầm là kết quả thật | Gắn nhãn kịch bản mock, giới hạn quyền AI và giữ bước nhân viên duyệt trước hành động |
-| CP6 Mức can thiệp / quyết định | Yêu cầu so sánh No AI/Rule/Workflow/Agent; giả định bộ phận khảo sát đã thu thập dữ liệu và chốt hướng Go cho pilot giới hạn | Hỗ trợ lập Canvas, eval, đánh giá rủi ro và ngưỡng dừng | Kết luận Go phụ thuộc vào số liệu khảo sát mô phỏng, không phải bằng chứng thật | Giới hạn Go ở pilot nhỏ, ghi rõ kịch bản mock và đặt ngưỡng dừng cùng điều kiện phê duyệt dữ liệu |
+| CP2 Problem Card | Lựa chọn các hướng cư dân, booking đoàn và tiếp nhận lỗi xe để phát triển thành 3 card; yêu cầu nêu actor, bottleneck, metric và từng bước quy trình | Hỗ trợ cấu trúc hóa card và ước lượng thời lượng cho bản nháp thảo luận | Các bước và thời lượng chưa được xác nhận với người làm nghiệp vụ | Ghi thời lượng là ước lượng ban đầu, xác định bottleneck cần kiểm chứng và bổ sung phương án không dùng AI |
+| CP4 Research | Không dùng AI để thay phỏng vấn hoặc tạo kết quả khảo sát; rà soát mục CP4 trong báo cáo nhóm | Hỗ trợ rà soát cách trình bày insight và giới hạn kết luận | Snapshot định tính chưa đủ để suy ra baseline đại diện | Dùng kết quả đúng phạm vi được ghi nhận và đề xuất đo baseline trước pilot |
+| CP5 Quy trình | Yêu cầu phác quy trình hiện tại cho ba card để làm rõ các bước và vị trí bottleneck | Chuyển candidate thành luồng bước dễ đọc và so sánh | Quy trình và thời lượng từng bước chưa được xác nhận với người làm nghiệp vụ | Ghi đây là ước lượng ban đầu, nêu rõ cần xác nhận trước khi dùng làm baseline |
+| CP5–6 Problem Statement | Đưa chủ đề nhóm đã chốt là xử lý và phản hồi ticket cư dân; yêu cầu điền v1 theo template, làm rõ metric, boundary và điểm AI can thiệp | Hệ thống hóa các trường thành đề xuất nhất quán | Baseline chưa được đo nên target chưa thể xem là kết quả đã đạt | Ghi rõ cách đo baseline, giới hạn quyền AI và giữ bước nhân viên duyệt trước hành động |
+| CP6 Mức can thiệp / quyết định | Yêu cầu so sánh No AI/Rule/Workflow/Agent và chốt hướng Go cho pilot giới hạn | Hỗ trợ lập Canvas, eval, đánh giá rủi ro và ngưỡng dừng | Dữ liệu định tính chưa đủ để khẳng định mức cải thiện trước pilot | Giới hạn Go ở pilot nhỏ, yêu cầu đo baseline và đặt ngưỡng dừng cùng điều kiện phê duyệt dữ liệu |
 
 ---
 
@@ -189,27 +189,27 @@ Khi nghe các candidates của Huy và Nghĩa, mình thấy cùng là bài toán
 
 **6.2. Nhóm có lúc nào bị "solution-first" (nghĩ giải pháp trước khi hiểu vấn đề) không? Lúc đó nhóm nhận ra và xử lý thế nào?**
 
-Đã có nguy cơ solution-first từ lúc đề bài được mô tả bằng “phân loại tự động” và “draft phản hồi”. Những từ đó đã hàm ý sẵn giải pháp AI. Khi chuyển thành quy trình, câu hỏi cụ thể hơn là ticket đang bị chậm ở bước đọc nội dung, chọn bộ phận hay soạn câu trả lời. So sánh No AI, Rule, Workflow và Agent để không mặc định phải dùng AI, ...
+Đã có nguy cơ solution-first khi các ý tưởng ban đầu được diễn đạt bằng “phân loại tự động” hay “draft phản hồi”, tức đã ngầm chọn AI trước khi làm rõ công việc hiện tại. Khi đọc các snapshot và quy trình nhóm, vấn đề cụ thể hơn là ticket lặp lại khiến nhân viên phải tìm hướng dẫn và xác nhận cách xử lý. Vì vậy phần đề xuất cần so sánh mẫu trả lời/Rule với Workflow, thay vì mặc định AI là đáp án. Quyết định pilot cần dựa trên baseline đo trước/sau, không dựa vào ước lượng ban đầu.
 
 **6.3. Tôi có đổi ý sau khi bị phản biện không? Kể một lần cụ thể.**
 
-Lúc bạn Huy hỏi: “Làm cách nào để xác nhận đã điều hướng đúng về bộ phận xử lý?” thì mình đề xuất Workflow hoặc Agent, giờ thì mình ngẫm lại là tùy bottleneck mà chọn tối ưu hơn. Khi mình hỏi Huy “Nếu hệ thống nghẽn thì xử lý như nào?”, câu trả lời đó cũng khiến phương án cần có đường quay về xử lý thủ công. Nhờ vậy đề xuất không chỉ nói AI sẽ phân loại, mà còn nêu cách phát hiện khi quy trình không hoạt động tốt.
+Huy hỏi: “Làm cách nào để xác nhận đã điều hướng đúng về bộ phận xử lý?” Câu hỏi khiến mình bổ sung chỉ số kiểm tra tuyến xử lý, nhưng sau khi đối chiếu với phạm vi nhóm chốt, mình thấy bottleneck chính trong CP5 là tra cứu hướng dẫn cho ticket lặp lại. Vì vậy đề xuất CP6 được chỉnh để AI tìm nguồn và soạn nháp, còn nhân viên xác nhận nội dung và tuyến xử lý. Khi mình hỏi Huy “Nếu hệ thống nghẽn thì xử lý như nào?”, câu hỏi đó nhắc mình đưa fallback thủ công và ngưỡng dừng vào pilot.
 
 **6.4. Kết quả kiểm chứng (phỏng vấn/survey/research) có làm tôi bất ngờ không? Điều gì?**
 
-Tôi không bất ngờ vì những điều đó đã được dự đoán trước. Điều mình rút ra từ việc này là quyết định Go thay đổi rất nhiều theo chất lượng bằng chứng: nếu có ticket bị chuyển lại và một baseline thời gian thì pilot có thể đặt mục tiêu rõ hơn, còn nếu chưa có quyền dùng dữ liệu thì vẫn phải dừng trước khi thử.
+Snapshot nhóm ghi nhận các trải nghiệm khác nhau: yêu cầu chỗ đỗ xe lặp lại, cư dân chờ phản hồi về sự cố ống nước, và nhân viên khó tìm hướng dẫn vệ sinh điều hòa. Điều mình chú ý là các tình huống này khác loại, nên không thể gộp thành một baseline chung. Các snapshot cho thấy có vấn đề đáng tìm hiểu thêm, còn mức độ phổ biến và thời gian tiết kiệm cần đo trên nhóm ticket cùng loại. Khi đo cần tách thời gian tra cứu, chờ, soạn và duyệt.
 
 **6.5. Điều khó nhất khi viết Problem Statement là gì?**
 
-Khó nhất là phân biệt giữa một bottleneck đã được xác nhận với một giả thuyết nghe có vẻ hợp lý. Ví dụ, nội dung ticket tự do có thể làm khó phân loại, nhưng chưa có dữ liệu để khẳng định đây là nguyên nhân chính khiến phản hồi chậm. Metric cũng cần đo cả tốc độ lẫn chất lượng: phản hồi nhanh hơn nhưng chuyển sai bộ phận thì không phải kết quả tốt.
+Khó nhất là phân biệt giữa bottleneck đã được xác nhận với giả thuyết nghe có vẻ hợp lý. Snapshot có một ví dụ nhân viên mất 30 phút tìm hướng dẫn, nhưng chưa đủ để coi đó là thời gian điển hình cho mọi ticket lặp lại. Metric vì vậy cần đo cả tốc độ lẫn chất lượng nguồn: phản hồi nhanh hơn nhưng dùng hướng dẫn sai phiên bản thì không phải kết quả tốt. Baseline cần được đo trước pilot, không suy ra từ một trường hợp đơn lẻ.
 
 **6.6. Nếu làm lại, tôi sẽ đổi gì? Tôi sẽ phản biện nhóm mạnh hơn ở điểm nào?**
 
-Nếu làm lại, mình sẽ hỏi sớm hơn về quy trình thực tế của nhân viên trực ticket và xin một mẫu ticket đã khử định danh để hiểu các trường thông tin đang có. Mình cũng sẽ kiểm tra xem form chuẩn, danh mục sự cố và quy tắc chuyển tuyến có thể giải quyết phần lớn trường hợp hay không trước khi đề xuất Workflow. Khi thảo luận với nhóm, mình sẽ hỏi rõ ai xác nhận ticket đã đến đúng bộ phận và cách xử lý tình huống khẩn cấp hoặc thiếu thông tin.
+Nếu làm lại, mình sẽ hỏi sớm hơn về quy trình thực tế của nhân viên trực ticket và xin một mẫu ticket đã khử định danh cùng hướng dẫn đang dùng để hiểu chỗ tra cứu vướng ở đâu. Mình sẽ kiểm tra xem kho hướng dẫn được sắp xếp lại, mẫu trả lời hay Rule có giải quyết đủ trước khi đề xuất Workflow. Khi thảo luận với nhóm, mình sẽ hỏi ai xác nhận hướng dẫn đúng phiên bản, cách xử lý khi không tìm thấy nguồn, và ticket khẩn cấp được chuyển cho ai.
 
 **6.7. Hiểu bài:** giải thích bằng 5–8 câu, không nhìn tài liệu, chuỗi *problem → quy trình → metric → boundary → mức can thiệp AI → quyết định* của bài nhóm mình.
 
-Bài toán nhóm chọn là xử lý và phản hồi ticket cư dân, trong đó giả thuyết bottleneck là đọc nội dung tự do rồi chọn đúng bộ phận. Quy trình đề xuất gồm nhận ticket, kiểm tra thông tin, gợi ý phân loại và soạn nháp, sau đó nhân viên duyệt rồi mới gửi hoặc chuyển. Nhóm đo độ đúng phân loại, thời gian phản hồi đầu tiên và tỷ lệ chuyển lại so với baseline. AI chỉ được gợi ý, không tự gửi, chuyển hay đóng ticket, và nhân viên xử lý các trường hợp khẩn cấp hoặc không rõ. Vì các bước có thể định trước nhưng nội dung ticket đa dạng, mức thử nghiệm được đề xuất là Workflow có người duyệt.
+Bài toán nhóm chọn là giảm thời gian xử lý ticket cư dân có nội dung lặp lại bằng cách tìm hướng dẫn đã duyệt và chuẩn bị phản hồi. Quy trình đi từ tiếp nhận, làm rõ, phân loại, tra cứu, soạn/kiểm tra đến gửi và ghi trạng thái. Pilot đo thời gian đến phản hồi đầu tiên, độ đúng và hiệu lực của nguồn, cùng tỷ lệ hỏi lại hoặc chuyển lại. AI chỉ tìm hướng dẫn được duyệt và soạn draft kèm nguồn; nhân viên xác minh và quyết định gửi, còn ca khẩn cấp hoặc thiếu nguồn quay về xử lý thủ công. Vì quy trình có thể định trước nhưng việc tìm nội dung phù hợp phụ thuộc ngữ cảnh, nhóm chọn Workflow có người duyệt để thử giới hạn. Quyết định Go chỉ dành cho pilot sau khi được phép dùng dữ liệu và đo baseline thật. Nếu nguồn sai hoặc pilot không đạt ngưỡng, nhóm dừng AI và quay về kho hướng dẫn cùng mẫu trả lời.
 
 ---
 

@@ -5,8 +5,8 @@
 ## Thông tin nhóm
 
 - Tên nhóm: Nhóm AE
-- Candidate problem nhóm chọn (1 câu): Phản hồi ticket cư dân
-- Quyết định cuối (Go / Not Yet / No-Go):
+- Candidate problem nhóm chọn (1 câu): Giảm thời gian xử lý ticket cư dân có nội dung lặp lại bằng cách giúp nhân viên tìm hướng dẫn đã duyệt và chuẩn bị phản hồi.
+- Quyết định cuối (Go / Not Yet / No-Go): Go — pilot giới hạn sau khi được phê duyệt dữ liệu và đo baseline.
 
 ## Thành viên
 
@@ -76,16 +76,20 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
--
+- CP6 — so sánh mức No AI/Rule/Workflow/Agent, Problem Statement v1, tiêu chí đánh giá và quyết định theo bốn rủi ro.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Đề xuất thử Workflow có người duyệt cho bước tìm hướng dẫn phù hợp và soạn nháp phản hồi ticket lặp lại.
+- Xác định boundary, phương án quay về xử lý thủ công, mục tiêu đo và ngưỡng dừng cho pilot giới hạn.
+- Hoàn thiện quyết định Go cho pilot giới hạn, có điều kiện phê duyệt dữ liệu, đo baseline và ngưỡng dừng rõ ràng.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- `report/team/group_report.md`, mục 6–8: ma trận, AI Canvas, Problem Statement v1, eval, bốn rủi ro và quyết định.
+- `report/team/group_report.md`, mục 2.1, hàng candidate của Mai và Huy: chủ đề ticket cư dân cùng câu hỏi phản biện.
+- `report/individual/2A202603872_MaiLeBaVuong.md`, mục 4–6: nhật ký tham gia, dùng AI và reflection.
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Câu hỏi “làm cách nào xác nhận đã điều hướng đúng?” khiến mình bổ sung cách đo chất lượng chuyển ticket, còn câu hỏi về lúc hệ thống nghẽn nhắc mình phải có fallback thủ công. Go chỉ hợp lý trong phạm vi pilot nhỏ khi có người duyệt, dữ liệu được phép sử dụng và ngưỡng dừng rõ ràng.
