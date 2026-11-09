@@ -33,10 +33,12 @@ Lăng kính: **Lặp lại** · **Tốn thời gian** · **Cần đọc, tổng 
 
 **Nếu có dùng AI để gợi ý thêm:** ý nào AI gợi ý mà bạn giữ lại, ý nào bỏ và vì sao.
 
-- AI gợi ý làm một “siêu trợ lý AI cho Vingroup” để xử lý mọi vấn đề từ phản ánh cư dân, đặt phòng đến sửa xe. Mình bỏ vì phạm vi quá rộng, không có một actor hay quy trình cụ thể để kiểm chứng.
-- AI gợi ý cho xe tự lái tự chẩn đoán rồi tự đặt lịch vào xưởng. Mình bỏ vì đây là giải pháp nhảy cóc sang tự động hóa, có rủi ro an toàn và chưa xuất phát từ bottleneck đã được xác nhận.
-- AI gợi ý dùng blockchain để chống trùng phản ánh cư dân. Mình bỏ vì chưa có bằng chứng phản ánh trùng là vấn đề đáng kể, và blockchain không giải thích được bước nào trong quy trình đang bị nghẽn.
-- AI gợi ý dự đoán trước nhu cầu đặt phòng của mọi đoàn khách rồi tự giữ phòng. Mình bỏ vì cần nhiều dữ liệu và giả định, trong khi bài toán ban đầu chỉ nói đến đọc email và đối chiếu tồn phòng.
+| # | Các ý tưởng AI đề xuất | Bỏ/Nhận | Lí do |
+|---:|---|---|---|
+| 1 | Tạo một “siêu trợ lý AI cho Vingroup” để xử lý phản ánh cư dân, đặt phòng và sửa xe trong cùng một hệ thống. | Bỏ | Ý tưởng quá rộng, không có một actor hay quy trình cụ thể để mình kiểm chứng. |
+| 2 | Để xe tự chẩn đoán lỗi rồi tự đặt lịch vào xưởng. | Bỏ | Đây là giải pháp nhảy thẳng sang tự động hóa, có rủi ro an toàn và chưa xuất phát từ bottleneck đã được xác nhận. |
+| 3 | Dùng blockchain để chống trùng phản ánh cư dân. | Bỏ | Mình chưa có bằng chứng phản ánh trùng là vấn đề đáng kể; blockchain cũng chưa chỉ ra được bước nào trong quy trình đang nghẽn. |
+| 4 | Dự đoán nhu cầu đặt phòng của mọi đoàn khách rồi tự giữ phòng trước. | Bỏ | Ý tưởng cần nhiều dữ liệu và giả định, trong khi candidate ban đầu chỉ nói đến đọc email và đối chiếu tồn phòng. |
 
 ## 3. Top 3 Problem Cards + quy trình nháp (CP2)
 
