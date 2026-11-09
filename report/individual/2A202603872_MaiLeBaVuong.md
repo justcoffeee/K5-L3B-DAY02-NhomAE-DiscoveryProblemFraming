@@ -145,8 +145,6 @@ Tổng thời gian tiếp nhận mô phỏng: khoảng 11 phút, chưa tính th�
 | Dữ liệu phản ánh có thể chứa thông tin cá nhân hoặc nhạy cảm | Đồng ý | Chỉ dùng dữ liệu được phép và khử định danh; chưa đưa dữ liệu cư dân vào công cụ AI |
 | Bảng chủ đề nêu sản phẩm AI, nhưng chưa mô tả quy trình hiện tại | Đồng ý | Chuyển trọng tâm sang actor, các bước đang làm và điểm nghẽn cần quan sát |
 
-> Trước khi dùng làm bài nộp, bổ sung dữ liệu cá nhân có thật cho CP1, xác minh quy trình và thời lượng cho CP2, rồi đổi tên file theo MSSV và họ tên. Nếu bạn chưa từng tiếp xúc các quy trình này, hãy trình bày các card như candidate để nhóm chọn người có thể kiểm chứng, không nhận chúng là trải nghiệm của mình.
-
 ---
 
 ## 4. Tôi đã tham gia phần nào (CP3 → CP7)
