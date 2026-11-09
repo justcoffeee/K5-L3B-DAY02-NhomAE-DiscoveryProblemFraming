@@ -13,7 +13,7 @@
 | STT | Họ và tên | MSSV | Vai trò trong nhóm | Tài khoản GitHub |
 |---:|---|---|---|---|
 | 1 | | | | |
-| 2 | Mai Lê Bá Vương| 2A202603872| Thành viên| bavuong2005|
+| 2 |Mai Lê Bá Vương|2A202603872|Thành viên|[bavuong2005](https://github.com/bavuong2005)|
 | 3 | | | | |
 | 4 | | | | |
 
