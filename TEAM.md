@@ -14,7 +14,7 @@
 |---:|---|---|---|---|
 | 1 | Phạm Hoàng Huy | 2A202603836 | Nhóm trưởng | justcoffeee |
 | 2 | Cấn Xuân Nghĩa | 2A202603805 | Thành viên | xuannghia2 |
-| 3 | Mai Lê Bá Vương | 2A202603872 | Thành viên | [bavuong2005](https://github.com/bavuong2005) |
+| 3 | Mai Lê Bá Vương | 2A202603872 | Thành viên | bavuong2005 |
 
 Không ghi email hay số điện thoại vào bảng này, vì repo có thể để public.
 
