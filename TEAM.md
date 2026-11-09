@@ -5,7 +5,7 @@
 ## Thông tin nhóm
 
 - Tên nhóm: Nhóm AE
-- Candidate problem nhóm chọn (1 câu):
+- Candidate problem nhóm chọn (1 câu): Phản hồi ticket cư dân
 - Quyết định cuối (Go / Not Yet / No-Go):
 
 ## Thành viên
