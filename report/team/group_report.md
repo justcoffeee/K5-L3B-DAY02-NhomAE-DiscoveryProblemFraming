@@ -26,10 +26,7 @@
 | 6 | Phạm Hoàng Huy | Phản hồi ticket vấn đề của cư dân | Ban quản lý | Thời gian phản hồi và xử lý | Độ chính xác của phản hồi? (Cấn Xuân Nghĩa) Nếu hệ thống nghẽn thì xử lý như nào? (Mai Lê Bá Vương) |
 | 7 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh tính xác thực của thông tin | Người dùng mạng xã hội | Khó khăn khi truy cứu tính xác thực | |
 | 8 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh nguồn gốc, thời điểm, ngữ cảnh của thông tin được chia sẻ | Người dùng mạng xã hội | Khó khăn khi truy cứu nguồn gốc | Có thật sự cần thiết không? (Phạm Hoàng Huy) |
-| 9 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc kiểm tra video/ hình ảnh có chỉnh sửa của AI | Người dùng mạng xã hội | Khó khăn khi xác thực video/ hình ảnh | Hiện tại do nét chỉnh sửa của AI nên công cụ này có thật sự cần thiết không? (Phạm Hoàng Huy) |
-| 10 | | | | | |
-| 11 | | | | | |
-| 12 | | | | | |
+| 9 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc kiểm tra video/ hình ảnh có chỉnh sửa của AI | Người dùng mạng xã hội | Khó khăn khi xác thực video/ hình ảnh | Hiện tại do nét chỉnh sửa của AI vẫn khá rõ và tính ứng dụng không cao nên công cụ này có thật sự cần thiết không? (Phạm Hoàng Huy) |
 
 ### 2.2. Cluster
 
@@ -78,14 +75,14 @@ Những ý đã gạch bỏ vì là solution đội lốt opportunity:
 
 | # | Giả định | Loại (Value / Usability / Feasibility / Viability) | Quan trọng (1–5) | Đã có bằng chứng (1–5) | Kiểm chứng trước? |
 |---:|---|---|---:|---:|---|
-| 1 | Nhân viên thường nhận những ticket có nội dung tương tự nhau | Value | 5 | 5 | Số lần xuất hiện yêu cầu sửa chữa về chỗ gửi xe tăng cao |
+| 1 | Nhân viên thường nhận những ticket có nội dung tương tự nhau | Value | 5 | 3 | Số lần xuất hiện yêu cầu sửa chữa về chỗ gửi xe tăng cao |
 | 2 | Tìm hướng dẫn và soạn lại câu trả lời là bước tốn thời gian đáng kể | Value | 4 | 4 | Nhân viên không thống nhất trong cách xử lý |
 | 3 | Hướng dẫn đã duyệt tồn tại nhưng khó tìm hoặc khó biết bản nào mới nhất | Feasibility | 3 | 3 | Cách lưu tài liệu, tìm kiếm và cập nhật hiện tại |
-| 4 | Quy định cho phép xử lý nội dung ticket bằng công cụ dự kiến | Viability | 5 | 3 | Quy định dữ liệu và người có thẩm quyền xác nhận|
+| 4 | Quy định cho phép xử lý nội dung ticket bằng công cụ dự kiến | Viability | 5 | 1 | Quy định dữ liệu và người có thẩm quyền xác nhận|
 
 *Điền 4–6 giả định; xóa dòng thừa.*
 
-Giả định nhóm kiểm chứng trong buổi này:
+Giả định nhóm kiểm chứng trong buổi này: Nhóm tập trung kiểm chứng giả định #1 và #2: nhân viên thường nhận các ticket tương tự nhau, và việc tìm hướng dẫn để chuẩn bị phản hồi chiếm thời gian đáng kể. Nhóm hỏi về các yêu cầu lặp lại gần đây, cách xử lý hiện tại và thời gian tra cứu
 
 ### 3.2. Kiểm chứng
 
