@@ -18,15 +18,15 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | Mai Lê Bá Vương | Điều hướng vấn đề của cư dân đến bộ phận xử lý | Cư dân, Ban quản lý | Thời gian phản hồi lâu | |
-| 2 | Mai Lê Bá Vương | Đối chiếu yêu cầu đặt phòng với tình trạng từng phòng | | | |
-| 3 | Mai Lê Bá Vương | Làm rõ mô tả lỗi xe trước khi đi kiểm tra | | | |
-| 4 | Phạm Hoàng Huy | Tổng hợp file yêu cầu bài tập trước khi làm | | | |
-| 5 | Phạm Hoàng Huy | Sắp xếp deadline môn học | | | |
-| 6 | Phạm Hoàng Huy | Phản hồi ticket vấn đề của cư dân | | | |
-| 7 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh tính xác thực của thông tin | | | |
-| 8 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh nguồn gốc, thời điểm, ngữ cảnh của thông tin được chia sẻ | | | |
-| 9 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc kiểm tra video/ hình ảnh có chỉnh sửa của AI | | | |
+| 1 | Mai Lê Bá Vương | Điều hướng vấn đề của cư dân đến bộ phận xử lý | Ban quản lý | Thời gian phản hồi lâu | Làm cách nào để xác nhận đã điều hướng đúng về bộ phận xử lý? (Phạm Hoàng Huy) |
+| 2 | Mai Lê Bá Vương | Đối chiếu yêu cầu đặt phòng với tình trạng từng phòng | Ban quản lý | Thời gian và thông tin cần xác nhận | Có cách nào để update tình trạng phòng theo thời gian thực không? (Phạm Hoàng Huy) |
+| 3 | Mai Lê Bá Vương | Làm rõ mô tả lỗi xe trước khi đi kiểm tra | Nhân viên sửa xe | Thời gian sửa | |
+| 4 | Phạm Hoàng Huy | Tổng hợp file yêu cầu bài tập trước khi làm | Người làm bài tập | Thời gian xác nhận yêu cầu làm bài | |
+| 5 | Phạm Hoàng Huy | Sắp xếp deadline môn học | Người làm bài tập | Số lần xác nhận lại deadline | |
+| 6 | Phạm Hoàng Huy | Phản hồi ticket vấn đề của cư dân | Ban quản lý | Thời gian phản hồi và xử lý | Độ chính xác của phản hồi? (Cấn Xuân Nghĩa) Nếu hệ thống nghẽn thì xử lý như nào? (Mai Lê Bá Vương) |
+| 7 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh tính xác thực của thông tin | Người dùng mạng xã hội | Khó khăn khi truy cứu tính xác thực | |
+| 8 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh nguồn gốc, thời điểm, ngữ cảnh của thông tin được chia sẻ | Người dùng mạng xã hội | Khó khăn khi truy cứu nguồn gốc | Có thật sự cần thiết không? (Phạm Hoàng Huy) |
+| 9 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc kiểm tra video/ hình ảnh có chỉnh sửa của AI | Người dùng mạng xã hội | Khó khăn khi xác thực video/ hình ảnh | Hiện tại do nét chỉnh sửa của AI nên công cụ này có thật sự cần thiết không? (Phạm Hoàng Huy) |
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
@@ -35,9 +35,9 @@
 
 | Cluster | Các candidate | Pattern chung |
 |---|---|---|
-| A | | |
-| B | | |
-| C | | |
+| A — Tiếp nhận và làm rõ yêu cầu | #1 Điều hướng phản ánh cư dân; #3 Làm rõ mô tả lỗi xe; #6 Phản hồi ticket cư dân | |
+| B — Tổng hợp và đối chiếu thông tin | | |
+| C — Kiểm chứng độ tin cậy của thông tin | | |
 
 ### 2.3. Opportunity Solution Tree rút gọn
 
