@@ -121,41 +121,96 @@ Tổng hợp:
 
 ## 4. Quy trình trước/sau (CP5)
 
+**Phạm vi:** Tiếp nhận và chuẩn bị phản hồi đầu tiên cho ticket cư dân có nội dung lặp lại. Việc sửa chữa, xử lý thực địa và đóng ticket thuộc trách nhiệm của nhân viên/bộ phận chuyên trách.
+
+**Cơ sở mô tả:** Các [snapshot #1](../assets/cp4-interview-snapshot-1.md), [#2](../assets/cp4-interview-snapshot-2.md) và [#3](../assets/cp4-interview-snapshot-3.md) ghi nhận yêu cầu lặp lại, chờ phản hồi và khó tìm hướng dẫn. Quy trình dưới đây là bản tổng hợp cần được người vận hành xác nhận; chưa có đo thời gian từng bước.
+
 ### 4.1. Quy trình hiện tại
 
-Sơ đồ (ASCII, Mermaid hoặc link ảnh trong `report/assets/`):
-
-```text
-
+```mermaid
+flowchart TD
+    A["1. Tiếp nhận ticket"] --> B["2. Đọc và làm rõ thông tin"]
+    B --> C{"Đủ thông tin?"}
+    C -->|"Chưa"| D["Hỏi cư dân bổ sung"]
+    D --> B
+    C -->|"Đủ"| E["3. Xác định loại yêu cầu và bộ phận phụ trách"]
+    E --> F["4. Tìm hướng dẫn hoặc hỏi bộ phận chuyên trách"]
+    F --> G["5. Soạn và kiểm tra phản hồi"]
+    G --> H["6. Gửi phản hồi, chuyển xử lý và ghi nhận trạng thái"]
+    classDef bottleneck fill:#ffe6e6,stroke:#c62828,stroke-width:2px;
+    class F bottleneck;
 ```
 
-| Bước | Actor | Input | Output | Thời gian / tần suất | Ghi chú |
+| Bước | Actor | Input | Output | Thời gian / tần suất | Handoff / lưu ý |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
+| 1. Tiếp nhận | Nhân viên CSKH/ban quản lý | Tin nhắn hoặc ticket cư dân | Yêu cầu được ghi nhận | Chưa đo | Cư dân → nhân viên tiếp nhận |
+| 2. Làm rõ | Nhân viên và cư dân | Nội dung phản ánh, vị trí, thông tin liên quan | Yêu cầu đủ thông tin để phân loại | Chưa đo | Hỏi lại nếu thiếu mô tả hoặc vị trí |
+| 3. Phân loại | Nhân viên tiếp nhận | Yêu cầu đã làm rõ, danh mục trách nhiệm | Loại yêu cầu và bộ phận dự kiến xử lý | Chưa đo | Xác nhận trách nhiệm khi ticket liên quan nhiều bộ phận |
+| 4. Tra cứu và xác nhận | Nhân viên tiếp nhận, bộ phận chuyên trách | Yêu cầu, tài liệu chung, dữ liệu vận hành | Hướng dẫn hoặc thông tin đã xác nhận | Một trường hợp tra cứu được kể mất 30 phút ở snapshot #3; chưa có mức điển hình | Chuyển câu hỏi tới người phụ trách nếu tài liệu không đủ |
+| 5. Soạn và kiểm tra | Nhân viên tiếp nhận | Hướng dẫn, kết quả xác nhận | Phản hồi sẵn sàng gửi | Chưa đo | Kiểm tra nội dung, phạm vi áp dụng và thông tin cần bảo mật |
+| 6. Phản hồi và bàn giao | Nhân viên tiếp nhận | Phản hồi đã kiểm tra, bộ phận phụ trách | Cư dân nhận phản hồi; yêu cầu được chuyển và ghi trạng thái | Chưa đo | Nhân viên tiếp nhận → cư dân và bộ phận chuyên trách |
 
-**Bottleneck chính:**
+**Bottleneck cần kiểm chứng:** Bước 4 — tìm đúng hướng dẫn và xác nhận cách xử lý. Nhân viên ở snapshot #3 cho biết phải tìm trong kho thông tin chung và mất 30 phút ở một trường hợp. Cần đo riêng thời gian tra cứu và thời gian chờ bộ phận khác để xác định phần có thể cải thiện.
+
+**Tổng thời gian hiện tại:** Chưa có baseline. Mốc 10 phút trong snapshot #1 là lời kể về kiểm tra/điều phối chỗ để xe; 30 phút trong snapshot #3 liên quan tra cứu; một ngày trong snapshot #2 là thời gian chờ do cư dân kể. Không cộng hoặc lấy trung bình các mốc khác loại này.
 
 ### 4.2. Quy trình tương lai
 
-Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người**, **boundary** ở đâu, **phương án quay về** khi AI sai.
+Đề xuất quy trình có các bước cố định, Rule kiểm tra dữ liệu, AI hỗ trợ tra cứu/soạn nháp và nhân viên duyệt trước mọi hành động. Đây là phương án thử nghiệm; cần so sánh với kho hướng dẫn và mẫu phản hồi không dùng AI.
 
-```text
-
+```mermaid
+flowchart TD
+    A["1. Tiếp nhận ticket"] --> B["2. Rule kiểm tra thông tin bắt buộc và cờ khẩn cấp"]
+    B --> C{"Thiếu thông tin hoặc có dấu hiệu khẩn cấp?"}
+    C -->|"Có"| D["Nhân viên làm rõ hoặc xử lý theo quy trình khẩn cấp"]
+    C -->|"Không"| E["3. AI gợi ý loại, bộ phận và tìm hướng dẫn đã duyệt"]
+    E --> F{"Có nguồn phù hợp, còn hiệu lực?"}
+    F -->|"Có"| G["4. AI soạn nháp kèm nguồn"]
+    F -->|"Không"| I["Fallback: nhân viên tra cứu hoặc hỏi chuyên trách"]
+    G --> H["5. Nhân viên kiểm nguồn, sửa và duyệt"]
+    I --> H
+    H --> J["6. Nhân viên gửi, chuyển xử lý và ghi trạng thái"]
+    D --> I
 ```
+
+| Bước | Rule / AI / con người | Kết quả đầu ra | Kiểm soát |
+|---:|---|---|---|
+| 1 | Con người | Ticket được ghi nhận | Chỉ thu thập dữ liệu cần thiết |
+| 2 | Rule; nhân viên xử lý ngoại lệ | Thông tin thiếu và dấu hiệu khẩn cấp được gắn cờ | Tiêu chí do đơn vị phê duyệt; nhân viên kiểm tra thêm, không coi Rule phát hiện được mọi nguy cơ |
+| 3 | AI hỗ trợ | Gợi ý loại/bộ phận, hướng dẫn và phiên bản nguồn | Chỉ dùng danh mục, tài liệu được phép; trường hợp không rõ chuyển người |
+| 4 | AI hỗ trợ | Bản nháp trả lời có nguồn đối chiếu | Không bịa dữ kiện, chính sách hoặc cam kết xử lý |
+| 5 | Con người | Nội dung và bộ phận nhận được xác nhận | Đối chiếu ticket gốc, nguồn, mức khẩn cấp; sửa hoặc bỏ gợi ý |
+| 6 | Con người | Phản hồi được gửi, ticket chuyển xử lý và lưu lịch sử | AI không tự gửi, chuyển hoặc đóng ticket |
+
+**Boundary — ranh giới vận hành:**
+
+- AI được gợi ý loại yêu cầu, bộ phận và nội dung nháp từ hướng dẫn đã duyệt; nhân viên quyết định cuối cùng.
+- Không tự gửi/chuyển/đóng ticket, thực hiện sửa chữa, hứa thời hạn, bồi thường hoặc miễn phí.
+- Không suy diễn thông tin hiện thời như số chỗ đỗ trống hay tiến độ sửa chữa từ tài liệu hoặc ticket cũ; cần xác nhận từ người/hệ thống có trách nhiệm.
+- Chỉ dùng tài liệu còn hiệu lực, đúng tòa nhà/phạm vi áp dụng. Dữ liệu thử nghiệm phải được cho phép và khử định danh.
+- Ticket thiếu dữ liệu, nguồn mâu thuẫn, ngoài phạm vi hoặc có dấu hiệu khẩn cấp phải được người phụ trách xem xét; không chờ AI soạn xong mới xử lý tình huống khẩn cấp.
+
+**Fallback — phương án quay về:**
+
+| Tình huống | Cách xử lý |
+|---|---|
+| Không có hướng dẫn phù hợp, không rõ phiên bản hoặc nguồn mâu thuẫn | Nhân viên tra cứu thủ công/hỏi chuyên trách trước khi phản hồi |
+| Thiếu thông tin hoặc cần dữ liệu hiện thời | Nhân viên hỏi cư dân hoặc kiểm tra với bộ phận phụ trách |
+| AI lỗi, phản hồi sai hoặc nguồn không hỗ trợ nội dung | Bỏ bản nháp; dùng mẫu đã duyệt và quy trình thủ công |
+| Có dấu hiệu khẩn cấp | Nhân viên chuyển người phụ trách theo quy trình khẩn cấp hiện hành |
 
 ### 4.3. Before / after
 
-| Chỉ số | Trước | Sau (kỳ vọng) | Ghi chú |
-|---|---:|---:|---|
-| Số bước | | | |
-| Tổng thời gian | | | |
-| Số bước thủ công | | | |
-| Bottleneck chính | | | |
-| Rủi ro mới phát sinh | | | |
+| Chỉ số | Trước | Sau (kỳ vọng) | Cách kiểm tra |
+|---|---|---|---|
+| Số bước chính | 6 bước | 6 bước | Đếm trên luồng thông thường; đo ngoại lệ riêng |
+| Tổng thời gian đến phản hồi đầu tiên | Chưa đo | Mục tiêu giảm ít nhất 20% trung vị so với baseline sẽ thu thập | Timestamp từ nhận ticket đến gửi phản hồi; gồm thời gian chờ và duyệt |
+| Số bước có công cụ hỗ trợ | Chưa xác nhận công cụ đang dùng | Bước 2 có Rule; bước 3–4 có AI hỗ trợ | Quan sát thao tác và ghi thời gian người thực hiện; không suy ra giờ công chỉ từ số bước |
+| Bước con người chịu trách nhiệm | Nhân viên xử lý các bước sau tiếp nhận | Nhân viên kiểm ngoại lệ, duyệt và gửi/chuyển; vẫn giám sát toàn bộ quy trình | Kiểm lịch sử thao tác và quyết định |
+| Bottleneck | Giả thuyết: tìm hướng dẫn và chờ xác nhận | Kỳ vọng giảm tra cứu/soạn lại; chờ chuyên trách có thể vẫn tồn tại | Tách thời gian tra cứu, soạn, duyệt và chờ |
+| Rủi ro mới | Chưa đánh giá đầy đủ | AI chọn sai nguồn, phân loại sai, soạn sai hoặc lộ dữ liệu | Đối chiếu từng gợi ý với ticket, tài liệu và nhãn nhân viên xác nhận |
+
+**Kế hoạch đo:** Trước thử nghiệm, ghi các mốc nhận ticket, đủ thông tin, bắt đầu/kết thúc tra cứu, soạn, duyệt và gửi phản hồi. So sánh quy trình hiện tại, mẫu phản hồi/Rule và phương án AI trên bộ tình huống tương đương. Ghi riêng thời gian hoàn tất sửa chữa; không dùng thời gian tạo nháp để thay cho thời gian phản hồi hoặc giải quyết sự cố.
 
 ---
 
@@ -163,16 +218,23 @@ Ghi rõ bước nào **Rule**, bước nào **AI**, bước nào **con người*
 
 | Trường | Nội dung |
 |---|---|
-| **Actor** | |
-| **Quy trình** | |
-| **Bottleneck** | |
-| **Impact** | |
-| **Success Metric** (baseline → target, cách đo) | |
-| **Boundary** (AI không được làm gì; khi nào cần con người kiểm tra — HITL) | |
+| **Actor** | Nhân viên tiếp nhận/CSKH tại ban quản lý, phụ trách phản hồi và phối hợp xử lý yêu cầu cư dân. |
+| **Quy trình** | Tiếp nhận → làm rõ → phân loại → tra cứu/xác nhận → soạn và kiểm tra → phản hồi, chuyển xử lý và ghi nhận trạng thái. Bản tổng hợp cần người vận hành xác nhận. |
+| **Bottleneck** | Tìm đúng hướng dẫn và xác nhận cách xử lý cho yêu cầu lặp lại. Snapshot #3 ghi một trường hợp tra cứu mất 30 phút; chưa xác lập mức điển hình và chưa tách thời gian chờ. |
+| **Impact** | Nhân viên phải tra cứu lại, cư dân có thể chờ phản hồi. Ba snapshot cho thấy yêu cầu lặp lại, khó tìm thông tin và chờ đợi; chưa đủ dữ liệu để định lượng tổng giờ công, chi phí hoặc mức phổ biến. |
+| **Success Metric** | **Baseline:** chưa đo thời gian đến phản hồi đầu tiên, độ đúng nội dung và tỷ lệ chuyển lại. **Target đề xuất:** giảm ít nhất 20% thời gian phản hồi trung vị; tỷ lệ phản hồi đúng hướng dẫn và tỷ lệ phân tuyến đúng đều ≥90%; mọi ca khẩn cấp trong bộ kiểm thử được đưa cho người xử lý, không có phản hồi tự gửi. **Cách đo:** timestamp, quan sát và nhân viên đối chiếu nội dung/tuyến xử lý với tài liệu đã duyệt; đo riêng từng chỉ số và thời gian tra cứu, soạn, duyệt, chờ. Mục tiêu chỉ được xác nhận sau khi thu thập baseline, chưa phải kết quả đã đạt. |
+| **Boundary** | AI chỉ hỗ trợ gợi ý và soạn nháp có nguồn. Nhân viên kiểm tra trước khi gửi/chuyển; AI không tự đóng ticket, cam kết thời hạn, bịa thông tin vận hành hay thực hiện hành động kỹ thuật. Thiếu thông tin, nguồn mâu thuẫn, ngoài phạm vi, khẩn cấp hoặc công cụ lỗi thì chuyển người và quay về quy trình thủ công. |
 
-Phản biện nhận được (từ AI hoặc nhóm khác) và nhóm có đồng ý không:
+### 5.1. Phản biện bản v0 và hướng xử lý
 
--
+Các điểm dưới đây được ghi nhận qua rà soát bằng AI; nhóm cần tự xem xét và chốt, chưa ghi nhận sự đồng thuận hoặc kết quả kiểm chứng mới.
+
+| Điểm phản biện | Hướng xử lý trong bản v0 | Điều cần kiểm chứng tiếp |
+|---|---|---|
+| Phản hồi chậm chưa chắc do khó tìm hướng dẫn | Tách thời gian tra cứu, soạn, duyệt và chờ bộ phận khác | Quan sát từng bước trên ticket thực tế |
+| Một trường hợp 30 phút chưa phải baseline | Giữ là bằng chứng định tính có mốc thời gian, không suy rộng | Đo nhiều trường hợp cùng loại và tính trung vị |
+| Kho hướng dẫn hoặc mẫu trả lời có thể đã đủ | Đưa No AI/Rule vào phương án so sánh | Kiểm tra độ bao phủ, thời gian và chất lượng khi dùng mẫu |
+| Nhanh hơn nhưng trả lời sai vẫn không đạt | Đo đồng thời thời gian, nội dung đúng, phân tuyến đúng và xử lý ca khẩn cấp | Nhân viên có trách nhiệm xác nhận nhãn và tiêu chí đánh giá |
 
 ---
 
