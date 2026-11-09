@@ -5,9 +5,9 @@
 
 ## 1. Thông tin nhóm
 
-- Tên nhóm:
+- Tên nhóm: Nhóm AE
 - Thành viên: xem `TEAM.md`
-- Candidate problem được chọn (1 câu):
+- Candidate problem được chọn (1 câu): Phản hồi ticket của cư dân
 - Quyết định cuối: Go / Not Yet / No-Go
 
 ---
@@ -18,15 +18,15 @@
 
 | # | Người đưa ra | Candidate (Job Story ngắn) | Actor | Bottleneck | Câu hỏi phản biện nhận được (ai hỏi) |
 |---:|---|---|---|---|---|
-| 1 | | | | | |
-| 2 | | | | | |
-| 3 | | | | | |
-| 4 | | | | | |
-| 5 | | | | | |
-| 6 | | | | | |
-| 7 | | | | | |
-| 8 | | | | | |
-| 9 | | | | | |
+| 1 | Mai Lê Bá Vương | Điều hướng vấn đề của cư dân đến bộ phận xử lý | Cư dân, Ban quản lý | Thời gian phản hồi lâu | |
+| 2 | Mai Lê Bá Vương | Đối chiếu yêu cầu đặt phòng với tình trạng từng phòng | | | |
+| 3 | Mai Lê Bá Vương | Làm rõ mô tả lỗi xe trước khi đi kiểm tra | | | |
+| 4 | Phạm Hoàng Huy | Tổng hợp file yêu cầu bài tập trước khi làm | | | |
+| 5 | Phạm Hoàng Huy | Sắp xếp deadline môn học | | | |
+| 6 | Phạm Hoàng Huy | Phản hồi ticket vấn đề của cư dân | | | |
+| 7 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh tính xác thực của thông tin | | | |
+| 8 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc xác minh nguồn gốc, thời điểm, ngữ cảnh của thông tin được chia sẻ | | | |
+| 9 | Cấn Xuân Nghĩa | Người dùng gặp khó khăn trong việc kiểm tra video/ hình ảnh có chỉnh sửa của AI | | | |
 | 10 | | | | | |
 | 11 | | | | | |
 | 12 | | | | | |
