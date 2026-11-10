@@ -181,7 +181,7 @@ Người dùng Internet thường tiếp nhận các tuyên bố, tin tức và 
 
 | Hoạt động | Tôi đã làm gì? | Kết quả / ảnh hưởng tới bài nhóm |
 |---|---|---|
-| Pitch Problem Card | **Chưa cung cấp thông tin về buổi pitch.** Bổ sung nội dung đã trình bày và thời điểm pitch. | Chưa có dữ liệu để ghi nhận ảnh hưởng tới bài nhóm. |
+| Pitch Problem Card | **Chuẩn bị và trình bày 3 candidate về kiểm chứng thông tin: tìm/đối chiếu nguồn đáng tin cậy; truy tìm nguồn gốc, thời điểm và ngữ cảnh; kiểm tra hình ảnh/video có dấu hiệu chỉnh sửa hoặc do AI tạo ra..** Bổ sung nội dung đã trình bày và thời điểm pitch. | Chưa có dữ liệu để ghi nhận ảnh hưởng tới bài nhóm. |
 | Phản biện bài của bạn khác | **Cần tự bổ sung:** câu hỏi thực tế đã đặt cho bạn khác. | Chưa có thông tin. |
 | Nhận phản biện | **Cần tự bổ sung:** câu hỏi thực tế đã nhận được. | **Cần tự bổ sung:** nội dung đã sửa sau phản biện. |
 | Gom cluster / cây OST | **Cần tự bổ sung** hoạt động đã trực tiếp tham gia. | Chưa có thông tin. |
