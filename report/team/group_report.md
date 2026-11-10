@@ -335,4 +335,8 @@ Vì vậy, mức phù hợp để thử là Workflow có các bước cố đị
 
 ## 10. Tài liệu tham khảo
 
--
+| # | Nguồn | Nội dung tham khảo | Áp dụng trong báo cáo |
+|---:|---|---|---|
+| 1 | Zendesk — [Creating macros for repetitive ticket responses and actions](https://support.zendesk.com/hc/en-us/articles/4408844187034-Creating-macros-for-repetitive-ticket-responses-and-actions) | Mẫu phản hồi/thao tác chuẩn bị sẵn, do nhân viên lựa chọn và áp dụng khi xử lý ticket; có mẫu cá nhân và dùng chung. | Mục 3.3 và phương án No AI/Rule ở CP6: lấy mẫu trả lời làm đối chứng trước khi bổ sung sinh nội dung bằng AI. Không sử dụng nguồn này để khẳng định mức giảm thời gian cụ thể. |
+| 2 | Intercom — [How to use Copilot](https://www.intercom.com/help/en/articles/8587194-how-to-use-copilot) | Hỗ trợ tìm câu trả lời từ các nguồn kiến thức được bật, hiển thị nguồn để kiểm tra, đưa nội dung vào trình soạn và chỉnh sửa trước khi gửi; có thể lưu thành macro. | Mục 3.3 và đề xuất tra cứu/soạn nháp: nhân viên kiểm tra nguồn và nội dung trước khi phản hồi. Đây là Intercom Copilot, không phải Microsoft Copilot. |
+| 3 | Anthropic — [Building effective agents](https://www.anthropic.com/research/building-effective-agents), 19/12/2024 | Phân biệt Workflow có luồng định sẵn với Agent tự quyết quá trình/công cụ; ưu tiên giải pháp đơn giản nhất đủ dùng. | Mục 6: lý giải việc thử Workflow có người duyệt và so sánh phương án đơn giản hơn, thay vì mặc định cần Agent. Đây là nguồn nguyên tắc kiến trúc, không phải đánh giá sản phẩm hay tài liệu về các công cụ mới nhất. |

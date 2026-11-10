@@ -69,24 +69,20 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- CP5: Xây dựng quy trình As-Is, To-Be và Problem Statement v0 cho đề tài FactCheck AI.
+- Phụ trách CP5 theo phân công: quy trình hiện tại/tương lai, bảng Before/After và Problem Statement v0; Huy hỗ trợ tổng hợp vào báo cáo chung về ticket cư dân.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
-- Mô tả quy trình hiện tại gồm 6 bước và xác định bottleneck.
-
-- Đề xuất quy trình tương lai, phân chia vai trò Rule, AI và con người.
-
-- Xây dựng Boundary, Fallback và bảng so sánh Before/After.
-
-- Viết Problem Statement v0 theo 6 trường và đề xuất các metric đánh giá.
+- Chuẩn bị ba candidate cá nhân về kiểm chứng thông tin; các candidate được ghi trong bảng pitch của nhóm, không phải đề tài cuối cùng nhóm lựa chọn.
+- Nộp bản CP5 ban đầu cho hướng FactCheck, gồm As-Is/To-Be, bottleneck giả thuyết, phân chia Rule–AI–con người, boundary, fallback, bảng Before/After và bản Problem Statement v0.
+- Bản này được dùng làm tham khảo về cấu trúc khi Huy hỗ trợ chuyển CP5 sang đề tài ticket cư dân. Nội dung và bằng chứng FactCheck không được coi là quy trình hoặc bằng chứng thực tế của ticket cư dân.
+- Phần CP5 chung hiện mô tả bước tiếp nhận, tra cứu hướng dẫn và chuẩn bị phản hồi, có nhân viên kiểm tra và fallback. Các bước, thời gian và baseline vẫn cần được người vận hành xác nhận; không ghi là đã thử nghiệm thành công.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
-- group_report.md: Mục 4 – Process Mapping và Mục 5 – Problem Statement.
-
-- Sơ đồ As-Is, To-Be và bảng phân tích trong báo cáo CP5.
-
+- [Báo cáo cá nhân của Nghĩa](report/individual/2A202603805_CanXuanNghia.md), mục 2–3: các candidate FactCheck và quy trình nháp.
+- Commit [5fcc65f — bản CP5 ban đầu](https://github.com/justcoffeee/K5-L3B-DAY02-NhomAE-DiscoveryProblemFraming/commit/5fcc65f): bản đã nộp trong lịch sử Git; file riêng đã được xóa sau đó, không dẫn link tới file hiện không còn tồn tại.
+- [Báo cáo nhóm](report/team/group_report.md), mục 4–5: bản CP5 đã chuyển sang ticket cư dân với Huy hỗ trợ; commit [3bf44ba](https://github.com/justcoffeee/K5-L3B-DAY02-NhomAE-DiscoveryProblemFraming/commit/3bf44ba) ghi lần chỉnh sửa này.
 
 **Điều mình học được từ phần nhóm:**
 
