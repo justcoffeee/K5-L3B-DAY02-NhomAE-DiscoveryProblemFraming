@@ -25,11 +25,11 @@ Gợi ý vai trò (một người có thể giữ nhiều vai): điều phối t
 | Checkpoint | Người chính | Người hỗ trợ | Sản phẩm |
 |---|---|---|---|
 | CP3 — Hội tụ nhóm | Phạm Hoàng Huy | Mai Lê Bá Vương, Cấn Xuân Nghĩa | Cluster, cây OST, bảng chấm điểm |
-| CP4 — Kiểm chứng | Phạm Hoàng Huy | | Assumption map, snapshot hoặc survey |
-| CP4 — Research | Phạm Hoàng Huy | | Bảng research có link |
+| CP4 — Kiểm chứng | Phạm Hoàng Huy | Mai Lê Bá Vương | Assumption map, snapshot hoặc survey |
+| CP4 — Research | Phạm Hoàng Huy | Mai Lê Bá Vương | Bảng research có link |
 | CP5 — Quy trình trước/sau | Cấn Xuân Nghĩa | Phạm Hoàng Huy | Quy trình + bảng before/after |
 | CP5 — Problem Statement v0 | Cấn Xuân Nghĩa | Phạm Hoàng Huy | Problem Statement v0 |
-| CP6 — Mức can thiệp + Problem Statement v1 | Mai Lê Bá Vương | | Ma trận, AI Canvas, eval, Problem Statement v1 |
+| CP6 — Mức can thiệp + Problem Statement v1 | Mai Lê Bá Vương | Phạm Hoàng Huy | Ma trận, AI Canvas, eval, Problem Statement v1 |
 | CP6 — Quyết định | Mai Lê Bá Vương | Phạm Hoàng Huy | 4 rủi ro + Go/Not Yet/No-Go |
 
 ## Cá nhân
@@ -40,19 +40,30 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
--
+- Tổng hợp CP3, thực hiện CP4 và tham gia phỏng vấn.
+- Điều phối, phân chia công việc, hỗ trợ rà soát CP5 và đối chiếu với CP6.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Tổng hợp các candidate, câu hỏi phản biện, cluster, cây OST và bảng shortlist trong CP3; ghi lại bài toán ticket cư dân mà nhóm lựa chọn.
+- Lập bảng giả định và xác định nội dung cần kiểm chứng; tham gia phỏng vấn, tổng hợp ba snapshot gồm hai nhân viên và một cư dân.
+- Tổng hợp các tín hiệu về ticket lặp lại, khó tìm hướng dẫn và chờ phản hồi; làm rõ rằng các mốc 10 phút, 30 phút và một ngày khác tình huống, không phải baseline chung.
+- Tìm hiểu các cách hỗ trợ ticket như mẫu trả lời, tra cứu hướng dẫn và AI soạn nháp; bảng research còn cần bổ sung đủ nguồn và tự kiểm tra link trước khi nộp.
+- Hỗ trợ chỉnh CP5 từ bản tham khảo khác đề tài sang quy trình ticket cư dân: quy trình trước/sau, bottleneck, bảng before/after, boundary, fallback và Problem Statement v0. Có sử dụng AI hỗ trợ tổng hợp và rà soát; nội dung cần nhóm tự xác nhận.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- [Báo cáo nhóm](report/team/group_report.md), mục 2: pitch, cluster, OST, shortlist và candidate được chọn; mục 3: giả định, kiểm chứng và research; mục 4–5: phần hỗ trợ chỉnh CP5.
+- [Snapshot phỏng vấn #1](report/assets/cp4-interview-snapshot-1.md), [#2](report/assets/cp4-interview-snapshot-2.md), [#3](report/assets/cp4-interview-snapshot-3.md). 
+- Các commit: `1fd2295` (pitch và cluster), `3c80ded` (phân công và snapshot CP4), `3bf44ba` (chỉnh CP5), `841da93` (cập nhật phản biện và giả định).
+- [Báo cáo cá nhân](report/individual/2A202603836_PhamHoangHuy.md), mục 4–5: nhật ký đóng góp và sử dụng AI.
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Cần phân biệt phản hồi chậm vì tra cứu khó với chậm vì chờ bộ phận chuyên trách; phải xác định đúng bước nghẽn trước khi đề xuất AI.
+- Lời kể của từng người là tín hiệu để kiểm chứng tiếp, không thể lấy trung bình các tình huống khác nhau thành baseline. Metric cần có cách đo và kiểm tra cả chất lượng, không chỉ tốc độ.
+- Kho hướng dẫn và mẫu trả lời có thể đã đủ cho một số yêu cầu; nếu thử AI thì cần nguồn còn hiệu lực, người duyệt và phương án quay về thủ công.
+
 
 ### CanXuanNghia-2A202603805
 
