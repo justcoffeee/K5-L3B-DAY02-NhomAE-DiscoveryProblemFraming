@@ -69,19 +69,28 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
--
+- CP5: Xây dựng quy trình As-Is, To-Be và Problem Statement v0 cho đề tài FactCheck AI.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
--
+- Mô tả quy trình hiện tại gồm 6 bước và xác định bottleneck.
+
+- Đề xuất quy trình tương lai, phân chia vai trò Rule, AI và con người.
+
+- Xây dựng Boundary, Fallback và bảng so sánh Before/After.
+
+- Viết Problem Statement v0 theo 6 trường và đề xuất các metric đánh giá.
 
 **Bằng chứng** (phần nào trong `group_report.md`, file nào trong `report/assets/`, commit nào):
 
--
+- group_report.md: Mục 4 – Process Mapping và Mục 5 – Problem Statement.
+
+- Sơ đồ As-Is, To-Be và bảng phân tích trong báo cáo CP5.
+
 
 **Điều mình học được từ phần nhóm:**
 
--
+- Mình học được cách xác định vấn đề trước khi đề xuất giải pháp, cách phân tích quy trình để tìm bottleneck và phân chia vai trò giữa Rule, AI và con người. Đồng thời, mình hiểu rằng cần có bằng chứng thực tế để đánh giá vấn đề và chứng minh giá trị của giải pháp AI.
 
 ### MaiLeBaVuong-2A202603872
 
