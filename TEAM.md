@@ -96,7 +96,9 @@ Mỗi thành viên thêm một mục theo mẫu dưới đây, tiêu đề là `
 
 **Phần việc phụ trách:**
 
-- CP6 — so sánh mức No AI/Rule/Workflow/Agent, Problem Statement v1, tiêu chí đánh giá và quyết định theo bốn rủi ro.
+- Hỗ trợ CP3 — hội tụ candidate, xây cluster/cây OST và bảng chấm điểm shortlist.
+- Hỗ trợ CP4 — rà soát assumption map, kiểm chứng qua phỏng vấn và research giải pháp.
+- Phụ trách CP6 — so sánh mức No AI/Rule/Workflow/Agent, Problem Statement v1, tiêu chí đánh giá và quyết định theo bốn rủi ro.
 
 **Đóng góp cụ thể** (mình đã làm gì, ra sản phẩm gì):
 
