@@ -47,23 +47,22 @@ OUTCOME: Giảm thời gian phản hồi ticket cư dân, đồng thời bảo �
 └── Opportunity C: Trách nhiệm giữa các bộ phận chưa rõ với một số yêu cầu
 ```
 
-Những ý đã gạch bỏ vì là solution đội lốt opportunity:
-
--
-
 ### 2.4. Chấm điểm shortlist (1–5)
 
 | Candidate | Actor rõ | Quy trình rõ | Pain có bằng chứng | Impact đo được | Vừa sức lab | So sánh được No AI/Rule/Workflow/Agent | Nhóm hiểu domain | Tổng |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|
-| Mô tả lỗi xe trước khi kiểm tra | 4 | 4 | 3 | 3 | 4 | 4 | 5 | 22 |
+| Mô tả lỗi xe trước khi kiểm tra | 4 | 4 | 3 | 3 | 4 | 4 | 5 | 27 |
 | Phản hồi ticket cư dân  | 5 | 5 | 4 | 4 | 5 | 4 | 5 | 32 |
 | Kiểm tra tính xác thực của thông tin | 2 | 2 | 3 | 3 | 2 | 3 | 3 | 18 |
 
 **Candidate được chọn:** Phản hồi ticket cư dân
 
-**Vì sao chọn:** Vừa sức đối với nhóm và có thể ứng dụng được
+**Vì sao chọn:** Trong bảng tổng hợp của nhóm, ticket cư dân đạt 32/35 điểm, cao hơn mô tả lỗi xe (27/35) và kiểm chứng thông tin (18/35). Nhóm có thể giới hạn tác vụ ở tiếp nhận, tìm hướng dẫn và chuẩn bị phản hồi, với đầu ra để nhân viên kiểm tra và cách đo thời gian/chất lượng tương đối rõ.
 
-**Vì sao loại các candidate còn lại:** Chưa thật sự nắm rõ domain của candidate, khó triển khai và so sánh thực tế
+**Vì sao chưa chọn các candidate còn lại:**
+
+- **Mô tả lỗi xe trước khi kiểm tra:** Cần phân biệt ghi nhận triệu chứng với chẩn đoán nguyên nhân, đồng thời cần cố vấn/kỹ thuật viên xác nhận chất lượng phiếu. Trong tài liệu hiện có, nhóm chưa có quan sát nghiệp vụ hoặc đánh giá chuyên môn cho hướng này. So với ticket cư dân, phạm vi đánh giá trong lab khó chốt hơn; không suy từ diễn đạt rõ sang sửa xe nhanh hoặc chẩn đoán đúng.
+- **Kiểm chứng tính xác thực thông tin:** Actor và loại thông tin còn rộng; các card của Nghĩa chưa có dữ liệu người dùng hoặc bộ bằng chứng tham chiếu để đánh giá. Văn bản, nguồn gốc và ảnh/video có cách kiểm chứng khác nhau, nên cần thu hẹp trước khi đo chất lượng.
 
 **Xử lý bất đồng (nếu có):**
 
@@ -86,24 +85,13 @@ Giả định nhóm kiểm chứng trong buổi này: Nhóm tập trung kiểm c
 
 ### 3.2. Kiểm chứng
 
-Cách đã dùng: Phỏng vấn / Survey / Log, ticket, review
-
-Interview snapshot (mỗi buổi phỏng vấn một bảng, hoặc đặt file trong `report/assets/cp4-interview-snapshot-N.md`):
-
-| Trường | Nội dung |
-|---|---|
-| Người được hỏi (vai trò, không ghi tên thật) | |
-| Câu nói đáng nhớ nhất (nguyên văn) | |
-| Lần gần nhất gặp vấn đề này: chuyện gì đã xảy ra? | |
-| Hiện đang xử lý bằng cách nào (workaround)? | |
-| Mất bao lâu, bao lần? | |
-| Insight / opportunity rút ra | |
+Cách đã dùng: Phỏng vấn; đã lưu 3 snapshot, gồm 2 nhân viên và 1 cư dân. 
 
 Tổng hợp:
 
 | Nguồn | Số người / số mẫu | Tín hiệu xác nhận | Tín hiệu phản bác |
 |---|---:|---|---|
-| Phỏng vấn | 2 | Số lượng ticket trùng nhiều, phản hồi lâu | Không có |
+| Phỏng vấn — 3 snapshot đã lưu | 3 người: 2 nhân viên, 1 cư dân | Snapshot #1 ghi nhiều yêu cầu tương tự về chỗ để xe, khoảng 10 phút xử lý theo lời kể; #2 kể chờ một ngày khi báo hỏng ống nước; #3 kể mất 30 phút tìm hướng dẫn. Các trường hợp khác loại, chưa phải baseline chung. | Chưa ghi nhận ý kiến trực tiếp bác bỏ pain. Tuy nhiên, #1 liên quan kiểm tra vị trí trống/điều phối, chưa chắc giải quyết được bằng hướng dẫn có sẵn; #2 chưa tách chờ phản hồi khỏi chờ xử lý sự cố. Đây là các dấu hiệu giới hạn giả thuyết “tra cứu/soạn phản hồi là bottleneck”. |
 
 **Nhóm đã sửa problem thế nào sau kiểm chứng:**  Nhóm thu hẹp bài toán từ “phản hồi ticket cư dân” sang “giảm thời gian xử lý các ticket có nội dung lặp lại”. Ba cuộc phỏng vấn ghi nhận nhiều ticket tương tự và thời gian phản hồi lâu.
 
@@ -111,16 +99,12 @@ Tổng hợp:
 
 | Công cụ / case / pattern | Link | Giải bước nào trong quy trình? | Điểm mạnh | Khoảng trống / rủi ro | Bài học cho nhóm |
 |---|---|---|---|---|---|
-| Copilot | https://copilot.com/vi-vn/ | Tìm thông tin và gợi ý câu trả lời từ các nguồn kiến thức được bật. | Hiển thị nguồn để nhân viên kiểm tra; có thể chỉnh sửa trước khi gửi và lưu câu trả lời thành macro. | Cần kiểm tra nguồn có cập nhật, phù hợp quy định từng khu dân cư và được phép sử dụng không. | Gợi ý phản hồi cần có nguồn và người duyệt, thay vì để AI tự trả lời theo kiến thức chung |
-| | | | | | |
+| Zendesk Macros — mẫu phản hồi không cần sinh nội dung bằng AI | [Tài liệu Macros](https://support.zendesk.com/hc/en-us/articles/4408844187034-Creating-macros-for-repetitive-ticket-responses-and-actions) | Nhân viên chọn phản hồi/thao tác chuẩn bị sẵn khi xử lý ticket lặp lại. | Có mẫu cá nhân/chung; thêm nội dung và cập nhật trường ticket. Nhân viên tự đánh giá và áp dụng. | Nhân viên vẫn phải chọn đúng mẫu; cần quản lý nội dung và kiểm tra phạm vi áp dụng. Chưa có dữ liệu mức bao phủ ticket cư dân. | Thử kho hướng dẫn và mẫu trả lời làm đối chứng trước; nếu đủ nhanh và đúng thì chưa cần thêm AI. |
+| Intercom Copilot — tra cứu và chuẩn bị phản hồi | [How to use Copilot](https://www.intercom.com/help/en/articles/8587194-how-to-use-copilot) | Tìm câu trả lời từ các nguồn kiến thức được bật, đưa nội dung vào trình soạn để nhân viên sửa/gửi. | Hiển thị nguồn; có thể lọc nguồn, kiểm tra nội dung và lưu câu trả lời thành macro. | Cần cấu hình đúng nguồn nội bộ/công khai và kiểm tra quyền dùng dữ liệu, phiên bản, tòa nhà áp dụng. Chưa kiểm thử độ đúng với dữ liệu của nhóm. | Gợi ý cần có nguồn kiểm tra được và người duyệt; không dùng tên “Copilot” chung hoặc link Microsoft để chứng minh tính năng Intercom. |
 
 ---
 
 ## 4. Quy trình trước/sau (CP5)
-
-**Phạm vi:** Tiếp nhận và chuẩn bị phản hồi đầu tiên cho ticket cư dân có nội dung lặp lại. Việc sửa chữa, xử lý thực địa và đóng ticket thuộc trách nhiệm của nhân viên/bộ phận chuyên trách.
-
-**Cơ sở mô tả:** Các [snapshot #1](../assets/cp4-interview-snapshot-1.md), [#2](../assets/cp4-interview-snapshot-2.md) và [#3](../assets/cp4-interview-snapshot-3.md) ghi nhận yêu cầu lặp lại, chờ phản hồi và khó tìm hướng dẫn. Quy trình dưới đây là bản tổng hợp cần được người vận hành xác nhận; chưa có đo thời gian từng bước.
 
 ### 4.1. Quy trình hiện tại
 
@@ -148,8 +132,6 @@ flowchart TD
 | 6. Phản hồi và bàn giao | Nhân viên tiếp nhận | Phản hồi đã kiểm tra, bộ phận phụ trách | Cư dân nhận phản hồi; yêu cầu được chuyển và ghi trạng thái | Chưa đo | Nhân viên tiếp nhận → cư dân và bộ phận chuyên trách |
 
 **Bottleneck cần kiểm chứng:** Bước 4 — tìm đúng hướng dẫn và xác nhận cách xử lý. Nhân viên ở snapshot #3 cho biết phải tìm trong kho thông tin chung và mất 30 phút ở một trường hợp. Cần đo riêng thời gian tra cứu và thời gian chờ bộ phận khác để xác định phần có thể cải thiện.
-
-**Tổng thời gian hiện tại:** Chưa có baseline. Mốc 10 phút trong snapshot #1 là lời kể về kiểm tra/điều phối chỗ để xe; 30 phút trong snapshot #3 liên quan tra cứu; một ngày trong snapshot #2 là thời gian chờ do cư dân kể. Không cộng hoặc lấy trung bình các mốc khác loại này.
 
 ### 4.2. Quy trình tương lai
 
@@ -207,8 +189,6 @@ flowchart TD
 | Bottleneck | Giả thuyết: tìm hướng dẫn và chờ xác nhận | Kỳ vọng giảm tra cứu/soạn lại; chờ chuyên trách có thể vẫn tồn tại | Tách thời gian tra cứu, soạn, duyệt và chờ |
 | Rủi ro mới | Chưa đánh giá đầy đủ | AI chọn sai nguồn, phân loại sai, soạn sai hoặc lộ dữ liệu | Đối chiếu từng gợi ý với ticket, tài liệu và nhãn nhân viên xác nhận |
 
-**Kế hoạch đo:** Trước thử nghiệm, ghi các mốc nhận ticket, đủ thông tin, bắt đầu/kết thúc tra cứu, soạn, duyệt và gửi phản hồi. So sánh quy trình hiện tại, mẫu phản hồi/Rule và phương án AI trên bộ tình huống tương đương. Ghi riêng thời gian hoàn tất sửa chữa; không dùng thời gian tạo nháp để thay cho thời gian phản hồi hoặc giải quyết sự cố.
-
 ---
 
 ## 5. Problem Statement v0 (CP5)
@@ -221,17 +201,6 @@ flowchart TD
 | **Impact** | Nhân viên phải tra cứu lại, cư dân có thể chờ phản hồi. Ba snapshot cho thấy yêu cầu lặp lại, khó tìm thông tin và chờ đợi; chưa đủ dữ liệu để định lượng tổng giờ công, chi phí hoặc mức phổ biến. |
 | **Success Metric** | **Baseline:** chưa đo thời gian đến phản hồi đầu tiên, độ đúng nội dung và tỷ lệ chuyển lại. **Target đề xuất:** giảm ít nhất 20% thời gian phản hồi trung vị; tỷ lệ phản hồi đúng hướng dẫn và tỷ lệ phân tuyến đúng đều ≥90%; mọi ca khẩn cấp trong bộ kiểm thử được đưa cho người xử lý, không có phản hồi tự gửi. **Cách đo:** timestamp, quan sát và nhân viên đối chiếu nội dung/tuyến xử lý với tài liệu đã duyệt; đo riêng từng chỉ số và thời gian tra cứu, soạn, duyệt, chờ. Mục tiêu chỉ được xác nhận sau khi thu thập baseline, chưa phải kết quả đã đạt. |
 | **Boundary** | AI chỉ hỗ trợ gợi ý và soạn nháp có nguồn. Nhân viên kiểm tra trước khi gửi/chuyển; AI không tự đóng ticket, cam kết thời hạn, bịa thông tin vận hành hay thực hiện hành động kỹ thuật. Thiếu thông tin, nguồn mâu thuẫn, ngoài phạm vi, khẩn cấp hoặc công cụ lỗi thì chuyển người và quay về quy trình thủ công. |
-
-### 5.1. Phản biện bản v0 và hướng xử lý
-
-Các điểm dưới đây được ghi nhận qua rà soát bằng AI; nhóm cần tự xem xét và chốt, chưa ghi nhận sự đồng thuận hoặc kết quả kiểm chứng mới.
-
-| Điểm phản biện | Hướng xử lý trong bản v0 | Điều cần kiểm chứng tiếp |
-|---|---|---|
-| Phản hồi chậm chưa chắc do khó tìm hướng dẫn | Tách thời gian tra cứu, soạn, duyệt và chờ bộ phận khác | Quan sát từng bước trên ticket thực tế |
-| Một trường hợp 30 phút chưa phải baseline | Giữ là bằng chứng định tính có mốc thời gian, không suy rộng | Đo nhiều trường hợp cùng loại và tính trung vị |
-| Kho hướng dẫn hoặc mẫu trả lời có thể đã đủ | Đưa No AI/Rule vào phương án so sánh | Kiểm tra độ bao phủ, thời gian và chất lượng khi dùng mẫu |
-| Nhanh hơn nhưng trả lời sai vẫn không đạt | Đo đồng thời thời gian, nội dung đúng, phân tuyến đúng và xử lý ca khẩn cấp | Nhân viên có trách nhiệm xác nhận nhãn và tiêu chí đánh giá |
 
 ---
 
@@ -340,6 +309,9 @@ Vì vậy, mức phù hợp để thử là Workflow có các bước cố đị
 
 ### Hạn chế
 
+- **Phạm vi mẫu và kiểm chứng nguyên nhân:** Có 3 snapshot, gồm 2 nhân viên và 1 cư dân; cần phân biệt chậm do tìm hướng dẫn với chờ xác nhận hoặc xử lý thực địa. Chưa thể coi mọi thời gian chờ là phần AI sẽ cải thiện.
+- **Research chưa phải thử nghiệm:** Các nền tảng mới được đối chiếu qua tài liệu; chưa có kết quả sử dụng hoặc so sánh No AI/Rule/Workflow trên ticket của đơn vị.
+
 - **Bằng chứng còn ít và chủ yếu định tính:** Các snapshot phỏng vấn cho thấy ticket lặp lại, khó tìm hướng dẫn và có trường hợp cư dân chờ phản hồi lâu, nhưng chưa đại diện cho các tòa nhà, ca trực hay nhóm sự cố khác nhau. Chưa có dữ liệu log để xác định tần suất, thời gian xử lý điển hình hoặc mức độ ảnh hưởng trên toàn quy trình.
 - **Chưa có baseline thực tế:** Con số 10 phút và 30 phút trong snapshot là ví dụ cá nhân, không phải số đo có thể dùng để kết luận hiệu quả. Thời gian từ lúc nhận ticket đến phản hồi đầu tiên, tỷ lệ phải hỏi lại/chuyển lại và chất lượng phản hồi cần được đo trước pilot.
 - **Kho hướng dẫn và quyền sử dụng dữ liệu chưa được xác nhận:** Nhóm chưa kiểm kê được tài liệu nào đang có hiệu lực, phiên bản, phạm vi áp dụng, người chịu trách nhiệm cập nhật, cũng như quyền dùng ticket và tài liệu cho thử nghiệm.
@@ -348,12 +320,18 @@ Vì vậy, mức phù hợp để thử là Workflow có các bước cố đị
 
 ### Hướng tiếp theo
 
+- Bổ sung thông tin truy xuất của các buổi phỏng vấn và hỏi rõ các tín hiệu còn mâu thuẫn; chỉ ghi dữ liệu thực tế.
+- Thử kho hướng dẫn/mẫu phản hồi và Rule làm đối chứng trước khi quyết định phần cần AI.
+
 1. **Xác nhận phạm vi với đơn vị vận hành:** Thống nhất nhóm ticket lặp lại phù hợp để thử nghiệm, tiêu chí ticket đủ thông tin, các trường hợp phải chuyển người ngay, quy trình hiện tại và người chịu trách nhiệm duyệt nội dung.
 2. **Kiểm kê và chuẩn bị dữ liệu:** Xác nhận quyền sử dụng dữ liệu; khử định danh ticket mẫu; lập danh sách hướng dẫn đã duyệt kèm phiên bản, ngày hiệu lực, phạm vi áp dụng và đầu mối cập nhật. Loại khỏi pilot tài liệu chưa rõ hiệu lực hoặc ticket chứa thông tin không được phép sử dụng.
 3. **Đo baseline trước khi thử nghiệm:** Trong tuần trước pilot, ghi nhận thời gian nhận ticket đến phản hồi đầu tiên, tỷ lệ hướng dẫn còn hiệu lực được áp dụng đúng và tỷ lệ hỏi lại/chuyển lại trên các ticket cùng phạm vi. Chốt cách ghi nhận và mẫu so sánh với nhân viên vận hành.
 4. **Chạy pilot có kiểm soát:** Chỉ sau khi được phê duyệt dữ liệu và tài liệu, thử nghiệm trong 2 tuần với tối đa 50 ticket lặp lại đã khử định danh. AI chỉ đưa gợi ý kèm nguồn và bản nháp; nhân viên kiểm tra, chỉnh sửa và tự quyết định mọi phản hồi hoặc chuyển tuyến.
 5. **Đánh giá trước khi mở rộng:** So sánh với baseline về thời gian phản hồi trung vị, độ đúng và hiệu lực của nguồn, tỷ lệ draft được chấp nhận và số lần hỏi lại/chuyển lại. Áp dụng ngưỡng dừng ở mục 8.2; nếu không đạt, quay lại tra cứu thủ công và rà soát kho hướng dẫn, tiêu chí hoặc phạm vi. Chỉ xem xét mở rộng sau khi kết quả được đơn vị vận hành xác nhận.
 6. **Nếu chưa đủ điều kiện dùng AI:** Chuẩn hóa danh mục sự cố, thông tin bắt buộc, quy tắc chuyển tuyến và mẫu phản hồi đã duyệt để cải thiện quy trình hiện tại, đồng thời tạo nền tảng cho lần đánh giá sau.
+
+---
+
 
 ## 10. Tài liệu tham khảo
 
