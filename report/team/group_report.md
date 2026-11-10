@@ -338,7 +338,22 @@ Vì vậy, mức phù hợp để thử là Workflow có các bước cố đị
 
 ## 9. Hạn chế và hướng tiếp theo
 
--
+### Hạn chế
+
+- **Bằng chứng còn ít và chủ yếu định tính:** Các snapshot phỏng vấn cho thấy ticket lặp lại, khó tìm hướng dẫn và có trường hợp cư dân chờ phản hồi lâu, nhưng chưa đại diện cho các tòa nhà, ca trực hay nhóm sự cố khác nhau. Chưa có dữ liệu log để xác định tần suất, thời gian xử lý điển hình hoặc mức độ ảnh hưởng trên toàn quy trình.
+- **Chưa có baseline thực tế:** Con số 10 phút và 30 phút trong snapshot là ví dụ cá nhân, không phải số đo có thể dùng để kết luận hiệu quả. Thời gian từ lúc nhận ticket đến phản hồi đầu tiên, tỷ lệ phải hỏi lại/chuyển lại và chất lượng phản hồi cần được đo trước pilot.
+- **Kho hướng dẫn và quyền sử dụng dữ liệu chưa được xác nhận:** Nhóm chưa kiểm kê được tài liệu nào đang có hiệu lực, phiên bản, phạm vi áp dụng, người chịu trách nhiệm cập nhật, cũng như quyền dùng ticket và tài liệu cho thử nghiệm.
+- **Phạm vi giải pháp còn hẹp:** Đề xuất chỉ hỗ trợ tra cứu hướng dẫn đã duyệt và soạn nháp cho ticket đủ thông tin, đã phân loại. Tình trạng vận hành theo thời gian thực, sự cố khẩn cấp, điều phối thực địa, gửi phản hồi và đóng ticket vẫn cần người/bộ phận phụ trách xử lý.
+- **Hiệu quả và độ an toàn của AI chưa được kiểm chứng:** Chưa có thử nghiệm với ticket thực tế để xác nhận khả năng tìm đúng nguồn, bám sát hướng dẫn và giảm thời gian. Các mục tiêu 95% và giảm 20% là ngưỡng đề xuất cho pilot, chưa phải kết quả đã đạt hay chuẩn đã được đơn vị vận hành thống nhất.
+
+### Hướng tiếp theo
+
+1. **Xác nhận phạm vi với đơn vị vận hành:** Thống nhất nhóm ticket lặp lại phù hợp để thử nghiệm, tiêu chí ticket đủ thông tin, các trường hợp phải chuyển người ngay, quy trình hiện tại và người chịu trách nhiệm duyệt nội dung.
+2. **Kiểm kê và chuẩn bị dữ liệu:** Xác nhận quyền sử dụng dữ liệu; khử định danh ticket mẫu; lập danh sách hướng dẫn đã duyệt kèm phiên bản, ngày hiệu lực, phạm vi áp dụng và đầu mối cập nhật. Loại khỏi pilot tài liệu chưa rõ hiệu lực hoặc ticket chứa thông tin không được phép sử dụng.
+3. **Đo baseline trước khi thử nghiệm:** Trong tuần trước pilot, ghi nhận thời gian nhận ticket đến phản hồi đầu tiên, tỷ lệ hướng dẫn còn hiệu lực được áp dụng đúng và tỷ lệ hỏi lại/chuyển lại trên các ticket cùng phạm vi. Chốt cách ghi nhận và mẫu so sánh với nhân viên vận hành.
+4. **Chạy pilot có kiểm soát:** Chỉ sau khi được phê duyệt dữ liệu và tài liệu, thử nghiệm trong 2 tuần với tối đa 50 ticket lặp lại đã khử định danh. AI chỉ đưa gợi ý kèm nguồn và bản nháp; nhân viên kiểm tra, chỉnh sửa và tự quyết định mọi phản hồi hoặc chuyển tuyến.
+5. **Đánh giá trước khi mở rộng:** So sánh với baseline về thời gian phản hồi trung vị, độ đúng và hiệu lực của nguồn, tỷ lệ draft được chấp nhận và số lần hỏi lại/chuyển lại. Áp dụng ngưỡng dừng ở mục 8.2; nếu không đạt, quay lại tra cứu thủ công và rà soát kho hướng dẫn, tiêu chí hoặc phạm vi. Chỉ xem xét mở rộng sau khi kết quả được đơn vị vận hành xác nhận.
+6. **Nếu chưa đủ điều kiện dùng AI:** Chuẩn hóa danh mục sự cố, thông tin bắt buộc, quy tắc chuyển tuyến và mẫu phản hồi đã duyệt để cải thiện quy trình hiện tại, đồng thời tạo nền tảng cho lần đánh giá sau.
 
 ## 10. Tài liệu tham khảo
 
